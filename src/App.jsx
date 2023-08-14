@@ -62,8 +62,6 @@ function App() {
       });
     }
 
-    console.log(nextArr);
-
     setEducation(nextArr);
   };
 
@@ -75,12 +73,7 @@ function App() {
     <>
       <div className="input-container">
         <GeneralInfo info={generalInfo} handleChange={handleGeneralChange} />
-        <Education
-          info={education}
-          handleChange={handleEducationChange}
-          counter={eduCounter}
-          setEducation={setEducation}
-        />
+        <Education info={education} handleChange={handleEducationChange} counter={eduCounter} />
         <WorkExp info={workExp} handleChange={handleWorkChange} />
       </div>
       <div className="display-container">
