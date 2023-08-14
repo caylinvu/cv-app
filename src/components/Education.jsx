@@ -1,6 +1,8 @@
-function Education({ info, handleChange }) {
+import { useState } from 'react';
+
+function EducationInputs({ info, handleChange, counter }) {
   return (
-    <div className="education">
+    <div className="education-inputs" id={counter}>
       <input
         type="text"
         placeholder="Degree / Field of Study"
@@ -36,6 +38,32 @@ function Education({ info, handleChange }) {
         value={info.description}
         onChange={handleChange}
       />
+    </div>
+  );
+}
+
+function AddEducationBtn({ setShowInputs }) {
+  const addEducation = () => {
+    setShowInputs(true);
+  };
+
+  return (
+    <button type="button" onClick={addEducation}>
+      + Education
+    </button>
+  );
+}
+
+function Education({ info, handleChange, counter }) {
+  const [showInputs, setShowInputs] = useState(false);
+
+  return (
+    <div className="education">
+      {showInputs ? (
+        <EducationInputs info={info} handleChange={handleChange} counter={counter} />
+      ) : (
+        <AddEducationBtn setShowInputs={setShowInputs} />
+      )}
     </div>
   );
 }

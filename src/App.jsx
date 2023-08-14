@@ -17,13 +17,9 @@ function App() {
     description: '',
   });
 
-  const [education, setEducation] = useState({
-    degree: '',
-    school: '',
-    startDate: '',
-    endDate: '',
-    description: '',
-  });
+  const [education, setEducation] = useState([]);
+
+  const [eduCounter, setEduCounter] = useState(0);
 
   const [workExp, setWorkExp] = useState({
     company: '',
@@ -38,7 +34,37 @@ function App() {
   };
 
   const handleEducationChange = (e) => {
-    setEducation({ ...education, [e.target.name]: e.target.value });
+    const parentId = e.target.parentElement.id;
+    let nextArr = [];
+
+    if (education.length < 1) {
+      nextArr = [
+        {
+          id: eduCounter,
+          [e.target.name]: e.target.value,
+        },
+      ];
+    } else {
+      nextArr = education.map((obj) => {
+        if (obj.id == null) {
+          return {
+            id: eduCounter,
+            [e.target.name]: e.target.value,
+          };
+        } else if (obj.id != parentId) {
+          return obj;
+        } else {
+          return {
+            ...obj,
+            [e.target.name]: e.target.value,
+          };
+        }
+      });
+    }
+
+    console.log(nextArr);
+
+    setEducation(nextArr);
   };
 
   const handleWorkChange = (e) => {
@@ -49,7 +75,12 @@ function App() {
     <>
       <div className="input-container">
         <GeneralInfo info={generalInfo} handleChange={handleGeneralChange} />
-        <Education info={education} handleChange={handleEducationChange} />
+        <Education
+          info={education}
+          handleChange={handleEducationChange}
+          counter={eduCounter}
+          setEducation={setEducation}
+        />
         <WorkExp info={workExp} handleChange={handleWorkChange} />
       </div>
       <div className="display-container">

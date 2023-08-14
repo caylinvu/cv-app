@@ -1,0 +1,4 @@
+.input-container > div,
+.display-container > div {
+  padding-bottom: 30px;
+}
