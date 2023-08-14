@@ -5,6 +5,7 @@ import DisplayGeneralInfo from './components/DisplayGeneralInfo';
 import Education from './components/Education';
 import DisplayEducation from './components/DisplayEducation';
 import WorkExp from './components/WorkExp';
+import DisplayWorkExp from './components/DisplayWorkExp';
 
 function App() {
   const [generalInfo, setGeneralInfo] = useState({
@@ -54,16 +55,13 @@ function App() {
       <div className="display-container">
         <DisplayGeneralInfo info={generalInfo} />
         <DisplayEducation info={education} />
+        <DisplayWorkExp info={workExp} />
       </div>
     </>
   );
 }
 
 export default App;
-
-// add basic education experience
-
-// add basic work experience
 
 // add ability to add additional education/work experience
 
