@@ -12,7 +12,7 @@ function Education({ info, handleChange }) {
         type="text"
         placeholder="School / University"
         name="school"
-        value={info.degree}
+        value={info.school}
         onChange={handleChange}
       />
       <input

@@ -3,6 +3,8 @@ import './styles/App.css';
 import GeneralInfo from './components/GeneralInfo';
 import DisplayGeneralInfo from './components/DisplayGeneralInfo';
 import Education from './components/Education';
+import DisplayEducation from './components/DisplayEducation';
+import WorkExp from './components/WorkExp';
 
 function App() {
   const [generalInfo, setGeneralInfo] = useState({
@@ -22,6 +24,14 @@ function App() {
     description: '',
   });
 
+  const [workExp, setWorkExp] = useState({
+    company: '',
+    position: '',
+    startDate: '',
+    endDate: '',
+    description: '',
+  });
+
   const handleGeneralChange = (e) => {
     setGeneralInfo({ ...generalInfo, [e.target.name]: e.target.value });
   };
@@ -30,14 +40,20 @@ function App() {
     setEducation({ ...education, [e.target.name]: e.target.value });
   };
 
+  const handleWorkChange = (e) => {
+    setWorkExp({ ...workExp, [e.target.name]: e.target.value });
+  };
+
   return (
     <>
       <div className="input-container">
         <GeneralInfo info={generalInfo} handleChange={handleGeneralChange} />
         <Education info={education} handleChange={handleEducationChange} />
+        <WorkExp info={workExp} handleChange={handleWorkChange} />
       </div>
       <div className="display-container">
         <DisplayGeneralInfo info={generalInfo} />
+        <DisplayEducation info={education} />
       </div>
     </>
   );
