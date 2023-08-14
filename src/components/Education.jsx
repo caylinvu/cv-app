@@ -8,6 +8,34 @@ function Education({ info, handleChange }) {
         value={info.degree}
         onChange={handleChange}
       />
+      <input
+        type="text"
+        placeholder="School / University"
+        name="school"
+        value={info.degree}
+        onChange={handleChange}
+      />
+      <input
+        type="text"
+        placeholder="Start Date"
+        name="startDate"
+        value={info.startDate}
+        onChange={handleChange}
+      />
+      <input
+        type="text"
+        placeholder="End Date"
+        name="endDate"
+        value={info.endDate}
+        onChange={handleChange}
+      />
+      <input
+        type="text"
+        placeholder="Description"
+        name="description"
+        value={info.description}
+        onChange={handleChange}
+      />
     </div>
   );
 }
