@@ -73,7 +73,12 @@ function App() {
     <>
       <div className="input-container">
         <GeneralInfo info={generalInfo} handleChange={handleGeneralChange} />
-        <Education info={education} handleChange={handleEducationChange} counter={eduCounter} />
+        <Education
+          info={education}
+          handleChange={handleEducationChange}
+          counter={eduCounter}
+          setCounter={setEduCounter}
+        />
         <WorkExp info={workExp} handleChange={handleWorkChange} />
       </div>
       <div className="display-container">
@@ -86,6 +91,8 @@ function App() {
 }
 
 export default App;
+
+// NEED TO MAKE INPUTS FORMS
 
 // add ability to add additional education/work experience
 
