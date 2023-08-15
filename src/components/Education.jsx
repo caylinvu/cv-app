@@ -57,13 +57,13 @@ function EducationInputs({ info, handleChange, setShowInputs }) {
   );
 }
 
-function AddEducationBtn({ setShowInputs, setEducation, info, counter, setIsActive, setCounter }) {
+function AddEducationBtn({ setShowInputs, setEducation, info, newId, setIsActive, setNewId }) {
   const addEducation = () => {
     setShowInputs(true);
     setEducation([
       ...info,
       {
-        id: counter,
+        id: newId,
         degree: '',
         school: '',
         startDate: '',
@@ -71,8 +71,8 @@ function AddEducationBtn({ setShowInputs, setEducation, info, counter, setIsActi
         description: '',
       },
     ]);
-    setIsActive(counter);
-    setCounter(counter + 1);
+    setIsActive(newId);
+    setNewId(newId + 1);
   };
 
   return (
@@ -82,8 +82,9 @@ function AddEducationBtn({ setShowInputs, setEducation, info, counter, setIsActi
   );
 }
 
-function Education({ info, handleChange, counter, setCounter, setEducation }) {
+function Education({ info, handleChange, setEducation }) {
   const [showInputs, setShowInputs] = useState(false);
+  const [newId, setNewId] = useState(0);
   const [isActive, setIsActive] = useState(0);
   const currentObj = info.find((obj) => obj.id == isActive);
   // console.log(currentObj);
@@ -105,9 +106,9 @@ function Education({ info, handleChange, counter, setCounter, setEducation }) {
             setShowInputs={setShowInputs}
             setEducation={setEducation}
             info={info}
-            counter={counter}
+            newId={newId}
             setIsActive={setIsActive}
-            setCounter={setCounter}
+            setNewId={setNewId}
           />
         </div>
       )}

@@ -19,8 +19,6 @@ function App() {
 
   const [education, setEducation] = useState([]);
 
-  const [eduCounter, setEduCounter] = useState(0);
-
   const [workExp, setWorkExp] = useState({
     company: '',
     position: '',
@@ -61,8 +59,6 @@ function App() {
         <Education
           info={education}
           handleChange={handleEducationChange}
-          counter={eduCounter}
-          setCounter={setEduCounter}
           setEducation={setEducation}
         />
         <WorkExp info={workExp} handleChange={handleWorkChange} />
