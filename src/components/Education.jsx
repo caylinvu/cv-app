@@ -60,6 +60,7 @@ function EducationForm({ activeObj, handleChange, setShowInputs }) {
 
 function AddEduBtn({ setShowInputs, setEducation, education, newId, setIsActive, setNewId }) {
   const addEducation = () => {
+    setIsActive(newId);
     setShowInputs(true);
     setEducation([
       ...education,
@@ -72,7 +73,6 @@ function AddEduBtn({ setShowInputs, setEducation, education, newId, setIsActive,
         description: '',
       },
     ]);
-    setIsActive(newId);
     setNewId(newId + 1);
   };
 
@@ -91,6 +91,14 @@ function EditEduBtn({ handleClick, id }) {
   );
 }
 
+function DeleteEduBtn({ handleClick, id }) {
+  return (
+    <button type="button" onClick={handleClick} id={id}>
+      Delete
+    </button>
+  );
+}
+
 function Education({ education, handleChange, setEducation }) {
   const [showInputs, setShowInputs] = useState(false);
   const [newId, setNewId] = useState(0);
@@ -101,6 +109,11 @@ function Education({ education, handleChange, setEducation }) {
   const editEducation = (e) => {
     setIsActive(e.target.id);
     setShowInputs(true);
+  };
+
+  const deleteEducation = (e) => {
+    let newArr = education.filter((obj) => obj.id != e.target.id);
+    setEducation(newArr);
   };
 
   return (
@@ -119,6 +132,7 @@ function Education({ education, handleChange, setEducation }) {
               <div key={obj.id}>
                 <p>{obj.school}</p>
                 <EditEduBtn handleClick={editEducation} id={obj.id} />
+                <DeleteEduBtn handleClick={deleteEducation} id={obj.id} />
               </div>
             );
           })}

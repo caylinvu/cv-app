@@ -76,8 +76,6 @@ export default App;
 
 // EDUCATION TO DOS
 
-// add ability to edit education experience
-
 // add ability to remove education experience
 
 // refactor education components to add all functions to main edu component
