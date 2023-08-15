@@ -1,10 +1,8 @@
 import { useState } from 'react';
 
-function SaveEduBtn({ counter, setCounter, setShowInputs, setIsActive }) {
+function SaveEduBtn({ setShowInputs }) {
   const saveEducation = () => {
-    setCounter(counter + 1);
     setShowInputs(false);
-    setIsActive(counter + 1);
   };
 
   return (
@@ -14,7 +12,7 @@ function SaveEduBtn({ counter, setCounter, setShowInputs, setIsActive }) {
   );
 }
 
-function EducationInputs({ info, handleChange, counter, setCounter, setShowInputs, setIsActive }) {
+function EducationInputs({ info, handleChange, setShowInputs }) {
   return (
     <div>
       <div className="education-inputs" id={info.id}>
@@ -54,17 +52,12 @@ function EducationInputs({ info, handleChange, counter, setCounter, setShowInput
           onChange={handleChange}
         />
       </div>
-      <SaveEduBtn
-        counter={counter}
-        setCounter={setCounter}
-        setShowInputs={setShowInputs}
-        setIsActive={setIsActive}
-      />
+      <SaveEduBtn setShowInputs={setShowInputs} />
     </div>
   );
 }
 
-function AddEducationBtn({ setShowInputs, setEducation, info, counter, setIsActive }) {
+function AddEducationBtn({ setShowInputs, setEducation, info, counter, setIsActive, setCounter }) {
   const addEducation = () => {
     setShowInputs(true);
     setEducation([
@@ -78,6 +71,8 @@ function AddEducationBtn({ setShowInputs, setEducation, info, counter, setIsActi
         description: '',
       },
     ]);
+    setIsActive(counter);
+    setCounter(counter + 1);
   };
 
   return (
@@ -90,18 +85,16 @@ function AddEducationBtn({ setShowInputs, setEducation, info, counter, setIsActi
 function Education({ info, handleChange, counter, setCounter, setEducation }) {
   const [showInputs, setShowInputs] = useState(false);
   const [isActive, setIsActive] = useState(0);
+  const currentObj = info.find((obj) => obj.id == isActive);
+  console.log(currentObj);
 
   return (
     <div className="education">
       {showInputs ? (
         <EducationInputs
-          info={info[isActive]}
+          info={currentObj}
           handleChange={handleChange}
-          counter={counter}
-          setCounter={setCounter}
           setShowInputs={setShowInputs}
-          isActive={isActive}
-          setIsActive={setIsActive}
         />
       ) : (
         <div>
@@ -114,6 +107,7 @@ function Education({ info, handleChange, counter, setCounter, setEducation }) {
             info={info}
             counter={counter}
             setIsActive={setIsActive}
+            setCounter={setCounter}
           />
         </div>
       )}
