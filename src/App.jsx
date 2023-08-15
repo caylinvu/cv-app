@@ -78,6 +78,7 @@ function App() {
           handleChange={handleEducationChange}
           counter={eduCounter}
           setCounter={setEduCounter}
+          setEducation={setEducation}
         />
         <WorkExp info={workExp} handleChange={handleWorkChange} />
       </div>

@@ -1,9 +1,10 @@
 import { useState } from 'react';
 
-function SaveEduBtn({ counter, setCounter, setShowInputs }) {
-  const saveEducation = (e) => {
+function SaveEduBtn({ counter, setCounter, setShowInputs, setIsActive }) {
+  const saveEducation = () => {
     setCounter(counter + 1);
     setShowInputs(false);
+    setIsActive(counter + 1);
   };
 
   return (
@@ -13,10 +14,10 @@ function SaveEduBtn({ counter, setCounter, setShowInputs }) {
   );
 }
 
-function EducationInputs({ info, handleChange, counter, setCounter, setShowInputs }) {
+function EducationInputs({ info, handleChange, counter, setCounter, setShowInputs, setIsActive }) {
   return (
     <div>
-      <div className="education-inputs" id={counter}>
+      <div className="education-inputs" id={info.id}>
         <input
           type="text"
           placeholder="Degree / Field of Study"
@@ -53,14 +54,30 @@ function EducationInputs({ info, handleChange, counter, setCounter, setShowInput
           onChange={handleChange}
         />
       </div>
-      <SaveEduBtn counter={counter} setCounter={setCounter} setShowInputs={setShowInputs} />
+      <SaveEduBtn
+        counter={counter}
+        setCounter={setCounter}
+        setShowInputs={setShowInputs}
+        setIsActive={setIsActive}
+      />
     </div>
   );
 }
 
-function AddEducationBtn({ setShowInputs }) {
+function AddEducationBtn({ setShowInputs, setEducation, info, counter, setIsActive }) {
   const addEducation = () => {
     setShowInputs(true);
+    setEducation([
+      ...info,
+      {
+        id: counter,
+        degree: '',
+        school: '',
+        startDate: '',
+        endDate: '',
+        description: '',
+      },
+    ]);
   };
 
   return (
@@ -70,25 +87,34 @@ function AddEducationBtn({ setShowInputs }) {
   );
 }
 
-function Education({ info, handleChange, counter, setCounter }) {
+function Education({ info, handleChange, counter, setCounter, setEducation }) {
   const [showInputs, setShowInputs] = useState(false);
+  const [isActive, setIsActive] = useState(0);
 
   return (
     <div className="education">
       {showInputs ? (
         <EducationInputs
-          info={info}
+          info={info[isActive]}
           handleChange={handleChange}
           counter={counter}
           setCounter={setCounter}
           setShowInputs={setShowInputs}
+          isActive={isActive}
+          setIsActive={setIsActive}
         />
       ) : (
         <div>
           {info.map((obj) => {
             return <p key={obj.id}>{obj.school}</p>;
           })}
-          <AddEducationBtn setShowInputs={setShowInputs} />
+          <AddEducationBtn
+            setShowInputs={setShowInputs}
+            setEducation={setEducation}
+            info={info}
+            counter={counter}
+            setIsActive={setIsActive}
+          />
         </div>
       )}
     </div>
