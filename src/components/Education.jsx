@@ -83,6 +83,10 @@ function AddEduBtn({ setShowInputs, setEducation, education, newId, setIsActive,
   );
 }
 
+function EditEduBtn() {
+  return <button type="button">Edit</button>;
+}
+
 function Education({ education, handleChange, setEducation }) {
   const [showInputs, setShowInputs] = useState(false);
   const [newId, setNewId] = useState(0);
@@ -92,6 +96,7 @@ function Education({ education, handleChange, setEducation }) {
 
   return (
     <div className="education">
+      <h2>Education</h2>
       {showInputs ? (
         <EducationForm
           activeObj={activeObj}
@@ -101,7 +106,12 @@ function Education({ education, handleChange, setEducation }) {
       ) : (
         <div>
           {education.map((obj) => {
-            return <p key={obj.id}>{obj.school}</p>;
+            return (
+              <div key={obj.id}>
+                <p>{obj.school}</p>
+                <EditEduBtn />
+              </div>
+            );
           })}
           <AddEduBtn
             setShowInputs={setShowInputs}

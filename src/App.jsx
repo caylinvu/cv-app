@@ -76,8 +76,6 @@ export default App;
 
 // EDUCATION TO DOS
 
-// make input forms and connect the save button to enter
-
 // add ability to edit education experience
 
 // add ability to remove education experience
