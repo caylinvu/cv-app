@@ -65,7 +65,7 @@ function App() {
       </div>
       <div className="display-container">
         <DisplayGeneralInfo info={generalInfo} />
-        <DisplayEducation info={education} />
+        <DisplayEducation education={education} />
         <DisplayWorkExp info={workExp} />
       </div>
     </>

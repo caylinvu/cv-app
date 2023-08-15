@@ -1,5 +1,5 @@
-function DisplayEducation({ info }) {
-  return info.map((obj) => {
+function DisplayEducation({ education }) {
+  return education.map((obj) => {
     return (
       <div className="display-education" key={obj.id}>
         <p>{obj.degree}</p>

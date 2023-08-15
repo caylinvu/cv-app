@@ -1,12 +1,13 @@
 import { useState } from 'react';
 
 function SaveEduBtn({ setShowInputs }) {
-  const saveEducation = () => {
+  const saveEducation = (e) => {
+    e.preventDefault();
     setShowInputs(false);
   };
 
   return (
-    <button type="button" onClick={saveEducation}>
+    <button type="submit" onClick={saveEducation}>
       Save
     </button>
   );
@@ -14,7 +15,7 @@ function SaveEduBtn({ setShowInputs }) {
 
 function EducationForm({ activeObj, handleChange, setShowInputs }) {
   return (
-    <div>
+    <form className="education-form">
       <div className="education-inputs" id={activeObj.id}>
         <input
           type="text"
@@ -53,7 +54,7 @@ function EducationForm({ activeObj, handleChange, setShowInputs }) {
         />
       </div>
       <SaveEduBtn setShowInputs={setShowInputs} />
-    </div>
+    </form>
   );
 }
 
