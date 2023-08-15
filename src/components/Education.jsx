@@ -83,8 +83,12 @@ function AddEduBtn({ setShowInputs, setEducation, education, newId, setIsActive,
   );
 }
 
-function EditEduBtn() {
-  return <button type="button">Edit</button>;
+function EditEduBtn({ handleClick, id }) {
+  return (
+    <button type="button" onClick={handleClick} id={id}>
+      Edit
+    </button>
+  );
 }
 
 function Education({ education, handleChange, setEducation }) {
@@ -93,6 +97,11 @@ function Education({ education, handleChange, setEducation }) {
   const [isActive, setIsActive] = useState(0);
   const activeObj = education.find((obj) => obj.id == isActive);
   // console.log(currentObj);
+
+  const editEducation = (e) => {
+    setIsActive(e.target.id);
+    setShowInputs(true);
+  };
 
   return (
     <div className="education">
@@ -109,7 +118,7 @@ function Education({ education, handleChange, setEducation }) {
             return (
               <div key={obj.id}>
                 <p>{obj.school}</p>
-                <EditEduBtn />
+                <EditEduBtn handleClick={editEducation} id={obj.id} />
               </div>
             );
           })}

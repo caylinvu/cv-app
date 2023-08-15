@@ -80,6 +80,8 @@ export default App;
 
 // add ability to remove education experience
 
+// refactor education components to add all functions to main edu component
+
 //
 
 // WORK TO DOS
