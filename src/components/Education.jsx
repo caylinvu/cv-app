@@ -12,43 +12,43 @@ function SaveEduBtn({ setShowInputs }) {
   );
 }
 
-function EducationInputs({ info, handleChange, setShowInputs }) {
+function EducationForm({ activeObj, handleChange, setShowInputs }) {
   return (
     <div>
-      <div className="education-inputs" id={info.id}>
+      <div className="education-inputs" id={activeObj.id}>
         <input
           type="text"
           placeholder="Degree / Field of Study"
           name="degree"
-          value={info.degree}
+          value={activeObj.degree}
           onChange={handleChange}
         />
         <input
           type="text"
           placeholder="School / University"
           name="school"
-          value={info.school}
+          value={activeObj.school}
           onChange={handleChange}
         />
         <input
           type="text"
           placeholder="Start Date"
           name="startDate"
-          value={info.startDate}
+          value={activeObj.startDate}
           onChange={handleChange}
         />
         <input
           type="text"
           placeholder="End Date"
           name="endDate"
-          value={info.endDate}
+          value={activeObj.endDate}
           onChange={handleChange}
         />
         <input
           type="text"
           placeholder="Description"
           name="description"
-          value={info.description}
+          value={activeObj.description}
           onChange={handleChange}
         />
       </div>
@@ -57,11 +57,11 @@ function EducationInputs({ info, handleChange, setShowInputs }) {
   );
 }
 
-function AddEducationBtn({ setShowInputs, setEducation, info, newId, setIsActive, setNewId }) {
+function AddEduBtn({ setShowInputs, setEducation, education, newId, setIsActive, setNewId }) {
   const addEducation = () => {
     setShowInputs(true);
     setEducation([
-      ...info,
+      ...education,
       {
         id: newId,
         degree: '',
@@ -82,30 +82,30 @@ function AddEducationBtn({ setShowInputs, setEducation, info, newId, setIsActive
   );
 }
 
-function Education({ info, handleChange, setEducation }) {
+function Education({ education, handleChange, setEducation }) {
   const [showInputs, setShowInputs] = useState(false);
   const [newId, setNewId] = useState(0);
   const [isActive, setIsActive] = useState(0);
-  const currentObj = info.find((obj) => obj.id == isActive);
+  const activeObj = education.find((obj) => obj.id == isActive);
   // console.log(currentObj);
 
   return (
     <div className="education">
       {showInputs ? (
-        <EducationInputs
-          info={currentObj}
+        <EducationForm
+          activeObj={activeObj}
           handleChange={handleChange}
           setShowInputs={setShowInputs}
         />
       ) : (
         <div>
-          {info.map((obj) => {
+          {education.map((obj) => {
             return <p key={obj.id}>{obj.school}</p>;
           })}
-          <AddEducationBtn
+          <AddEduBtn
             setShowInputs={setShowInputs}
             setEducation={setEducation}
-            info={info}
+            education={education}
             newId={newId}
             setIsActive={setIsActive}
             setNewId={setNewId}

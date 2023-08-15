@@ -57,7 +57,7 @@ function App() {
       <div className="input-container">
         <GeneralInfo info={generalInfo} handleChange={handleGeneralChange} />
         <Education
-          info={education}
+          education={education}
           handleChange={handleEducationChange}
           setEducation={setEducation}
         />
@@ -76,18 +76,24 @@ export default App;
 
 // EDUCATION TO DOS
 
-// update handle education change to remove redundant code
-
 // make input forms and connect the save button to enter
-
-// add labels
 
 // add ability to edit education experience
 
 // add ability to remove education experience
+
+//
 
 // WORK TO DOS
 
 // add ability to add additional work experience
 
 // add ability to remove work experience
+
+//
+
+// ALL TO DOS
+
+// add labels to fields
+
+// set correct input fields (email, phone number, dates)
