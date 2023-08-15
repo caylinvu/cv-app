@@ -86,7 +86,7 @@ function Education({ info, handleChange, counter, setCounter, setEducation }) {
   const [showInputs, setShowInputs] = useState(false);
   const [isActive, setIsActive] = useState(0);
   const currentObj = info.find((obj) => obj.id == isActive);
-  console.log(currentObj);
+  // console.log(currentObj);
 
   return (
     <div className="education">

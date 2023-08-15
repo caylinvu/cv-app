@@ -34,33 +34,18 @@ function App() {
   };
 
   const handleEducationChange = (e) => {
-    const parentId = e.target.parentElement.id;
-    let nextArr = [];
+    const currentId = e.target.parentElement.id;
 
-    if (education.length < 1) {
-      nextArr = [
-        {
-          id: eduCounter,
+    let nextArr = education.map((obj) => {
+      if (obj.id != currentId) {
+        return obj;
+      } else {
+        return {
+          ...obj,
           [e.target.name]: e.target.value,
-        },
-      ];
-    } else {
-      nextArr = education.map((obj) => {
-        if (obj.id == null) {
-          return {
-            id: eduCounter,
-            [e.target.name]: e.target.value,
-          };
-        } else if (obj.id != parentId) {
-          return obj;
-        } else {
-          return {
-            ...obj,
-            [e.target.name]: e.target.value,
-          };
-        }
-      });
-    }
+        };
+      }
+    });
 
     setEducation(nextArr);
   };
@@ -93,10 +78,20 @@ function App() {
 
 export default App;
 
-// NEED TO MAKE INPUTS FORMS
+// EDUCATION TO DOS
 
-// add ability to add additional education/work experience
+// update handle education change to remove redundant code
 
-// add ability to remove education/work experience
+// make input forms and connect the save button to enter
 
-// update to forms so enter works on save
+// add labels
+
+// add ability to edit education experience
+
+// add ability to remove education experience
+
+// WORK TO DOS
+
+// add ability to add additional work experience
+
+// add ability to remove work experience
