@@ -1,12 +1,12 @@
 import { useState } from 'react';
 import './styles/App.css';
 import InputGeneralInfo from './components/generalInfo/InputGeneralInfo';
+import InputExperience from './components/InputExperience';
+import EducationForm from './components/education/EducationForm';
+import WorkExpForm from './components/workExp/WorkExpForm';
 import DisplayGeneralInfo from './components/generalInfo/DisplayGeneralInfo';
 import DisplayEducation from './components/education/DisplayEducation';
 import DisplayWorkExp from './components/workExp/DisplayWorkExp';
-import EducationForm from './components/education/EducationForm';
-import WorkExpForm from './components/workExp/WorkExpForm';
-import InputExperience from './components/InputExperience';
 
 function App() {
   const [generalInfo, setGeneralInfo] = useState({
@@ -22,14 +22,10 @@ function App() {
 
   const [workExp, setWorkExp] = useState([]);
 
-  const handleGeneralChange = (e) => {
-    setGeneralInfo({ ...generalInfo, [e.target.name]: e.target.value });
-  };
-
   return (
     <>
       <div className="input-container">
-        <InputGeneralInfo info={generalInfo} handleChange={handleGeneralChange} />
+        <InputGeneralInfo info={generalInfo} setInfo={setGeneralInfo} />
         <InputExperience
           section={education}
           setSection={setEducation}
@@ -60,17 +56,9 @@ export default App;
 
 // set correct input fields (email, phone number, dates)
 
-// maybe move change handlers to specific components
-
-// maybe try to refactor some of the repeated education/work code
-
-// general info - add ability to save info to minimize and add edit button to update fields
-
 // style everything
 
-// disable other add button when clicking on add
-
-// DELETE INPUTEDUCATION AND INPUTWORKEXP COMPONENTS
+// MAYBE disable other add button when clicking on add
 
 //
 

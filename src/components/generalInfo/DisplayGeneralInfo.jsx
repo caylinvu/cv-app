@@ -1,7 +1,7 @@
 function DisplayGeneralInfo({ info }) {
   return (
     <div className="display-general-info">
-      <p>{info.name}</p>
+      <h2>{info.name}</h2>
       <p>{info.title}</p>
       <p>{info.email}</p>
       <p>{info.phone}</p>

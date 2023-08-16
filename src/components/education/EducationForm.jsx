@@ -6,16 +6,16 @@ function EducationForm({ activeObj, handleChange, handleClick }) {
       <div className={activeObj.id} id="education-inputs">
         <input
           type="text"
-          placeholder="Degree / Field of Study"
-          name="degree"
-          value={activeObj.degree}
+          placeholder="School / University"
+          name="school"
+          value={activeObj.school}
           onChange={handleChange}
         />
         <input
           type="text"
-          placeholder="School / University"
-          name="school"
-          value={activeObj.school}
+          placeholder="Degree / Field of Study"
+          name="degree"
+          value={activeObj.degree}
           onChange={handleChange}
         />
         <input
