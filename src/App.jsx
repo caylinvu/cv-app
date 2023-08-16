@@ -2,10 +2,11 @@ import { useState } from 'react';
 import './styles/App.css';
 import InputGeneralInfo from './components/generalInfo/InputGeneralInfo';
 import DisplayGeneralInfo from './components/generalInfo/DisplayGeneralInfo';
-import InputEducation from './components/education/InputEducation';
 import DisplayEducation from './components/education/DisplayEducation';
-import InputWorkExp from './components/workExp/InputWorkExp';
 import DisplayWorkExp from './components/workExp/DisplayWorkExp';
+import EducationForm from './components/education/EducationForm';
+import WorkExpForm from './components/workExp/WorkExpForm';
+import InputExperience from './components/InputExperience';
 
 function App() {
   const [generalInfo, setGeneralInfo] = useState({
@@ -25,44 +26,22 @@ function App() {
     setGeneralInfo({ ...generalInfo, [e.target.name]: e.target.value });
   };
 
-  const handleExpChange = (e) => {
-    const currentId = e.target.parentElement.className;
-    console.log(currentId);
-
-    let state = '';
-    let setState = '';
-    if (e.target.parentElement.id == 'education-inputs') {
-      state = education;
-      setState = setEducation;
-    } else if (e.target.parentElement.id == 'work-exp-inputs') {
-      state = workExp;
-      setState = setWorkExp;
-    }
-
-    let nextArr = state.map((obj) => {
-      if (obj.id != currentId) {
-        return obj;
-      } else {
-        return {
-          ...obj,
-          [e.target.name]: e.target.value,
-        };
-      }
-    });
-
-    setState(nextArr);
-  };
-
   return (
     <>
       <div className="input-container">
         <InputGeneralInfo info={generalInfo} handleChange={handleGeneralChange} />
-        <InputEducation
-          education={education}
-          setEducation={setEducation}
-          handleChange={handleExpChange}
+        <InputExperience
+          section={education}
+          setSection={setEducation}
+          Form={EducationForm}
+          title="Education"
         />
-        <InputWorkExp workExp={workExp} setWorkExp={setWorkExp} handleChange={handleExpChange} />
+        <InputExperience
+          section={workExp}
+          setSection={setWorkExp}
+          Form={WorkExpForm}
+          title="Work Experience"
+        />
       </div>
       <div className="display-container">
         <DisplayGeneralInfo info={generalInfo} />
@@ -88,6 +67,10 @@ export default App;
 // general info - add ability to save info to minimize and add edit button to update fields
 
 // style everything
+
+// disable other add button when clicking on add
+
+// DELETE INPUTEDUCATION AND INPUTWORKEXP COMPONENTS
 
 //
 
