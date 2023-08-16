@@ -77,7 +77,7 @@ function DeleteEduBtn({ handleClick, id }) {
   );
 }
 
-function Education({ education, handleChange, setEducation }) {
+function InputEducation({ education, handleChange, setEducation }) {
   const [showInputs, setShowInputs] = useState(false);
   const [newId, setNewId] = useState(0);
   const [isActive, setIsActive] = useState(0);
@@ -142,4 +142,4 @@ function Education({ education, handleChange, setEducation }) {
   );
 }
 
-export default Education;
+export default InputEducation;

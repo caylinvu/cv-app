@@ -1,4 +1,4 @@
-function GeneralInfo({ info, handleChange }) {
+function InputGeneralInfo({ info, handleChange }) {
   return (
     <div className="general-info">
       <h2>General Information</h2>
@@ -52,4 +52,4 @@ function GeneralInfo({ info, handleChange }) {
   );
 }
 
-export default GeneralInfo;
+export default InputGeneralInfo;

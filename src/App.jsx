@@ -1,11 +1,11 @@
 import { useState } from 'react';
 import './styles/App.css';
-import GeneralInfo from './components/GeneralInfo';
-import DisplayGeneralInfo from './components/DisplayGeneralInfo';
-import Education from './components/Education';
-import DisplayEducation from './components/DisplayEducation';
-import WorkExp from './components/WorkExp';
-import DisplayWorkExp from './components/DisplayWorkExp';
+import InputGeneralInfo from './components/generalInfo/InputGeneralInfo';
+import DisplayGeneralInfo from './components/generalInfo/DisplayGeneralInfo';
+import InputEducation from './components/education/InputEducation';
+import DisplayEducation from './components/education/DisplayEducation';
+import InputWorkExp from './components/workExp/InputWorkExp';
+import DisplayWorkExp from './components/workExp/DisplayWorkExp';
 
 function App() {
   const [generalInfo, setGeneralInfo] = useState({
@@ -55,13 +55,13 @@ function App() {
   return (
     <>
       <div className="input-container">
-        <GeneralInfo info={generalInfo} handleChange={handleGeneralChange} />
-        <Education
+        <InputGeneralInfo info={generalInfo} handleChange={handleGeneralChange} />
+        <InputEducation
           education={education}
           handleChange={handleEducationChange}
           setEducation={setEducation}
         />
-        <WorkExp info={workExp} handleChange={handleWorkChange} />
+        <InputWorkExp info={workExp} handleChange={handleWorkChange} />
       </div>
       <div className="display-container">
         <DisplayGeneralInfo info={generalInfo} />

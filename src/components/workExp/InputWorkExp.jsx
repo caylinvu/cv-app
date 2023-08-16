@@ -1,4 +1,4 @@
-function WorkExp({ info, handleChange }) {
+function InputWorkExp({ info, handleChange }) {
   return (
     <div className="work-exp">
       <h2>Work Experience</h2>
@@ -45,4 +45,4 @@ function WorkExp({ info, handleChange }) {
   );
 }
 
-export default WorkExp;
+export default InputWorkExp;
