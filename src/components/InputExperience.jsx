@@ -75,7 +75,7 @@ function InputExperience({ section, setSection, Form, title }) {
           {section.map((obj) => {
             return (
               <div key={obj.id}>
-                {title == 'Education' ? <p>{obj.school}</p> : <p>{obj.company}</p>}
+                {title == 'Education' ? <h3>{obj.school}</h3> : <h3>{obj.company}</h3>}
                 <EditButton handleClick={editExp} className={obj.id} />
                 <DeleteButton handleClick={deleteExp} className={obj.id} />
               </div>
