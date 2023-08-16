@@ -1,19 +1,6 @@
 import { useState } from 'react';
 
-function SaveEduBtn({ setShowInputs }) {
-  const saveEducation = (e) => {
-    e.preventDefault();
-    setShowInputs(false);
-  };
-
-  return (
-    <button type="submit" onClick={saveEducation}>
-      Save
-    </button>
-  );
-}
-
-function EducationForm({ activeObj, handleChange, setShowInputs }) {
+function EducationForm({ activeObj, handleChange, handleClick }) {
   return (
     <form className="education-form">
       <div className="education-inputs" id={activeObj.id}>
@@ -53,32 +40,23 @@ function EducationForm({ activeObj, handleChange, setShowInputs }) {
           onChange={handleChange}
         />
       </div>
-      <SaveEduBtn setShowInputs={setShowInputs} />
+      <SaveEduBtn handleClick={handleClick} />
     </form>
   );
 }
 
-function AddEduBtn({ setShowInputs, setEducation, education, newId, setIsActive, setNewId }) {
-  const addEducation = () => {
-    setIsActive(newId);
-    setShowInputs(true);
-    setEducation([
-      ...education,
-      {
-        id: newId,
-        degree: '',
-        school: '',
-        startDate: '',
-        endDate: '',
-        description: '',
-      },
-    ]);
-    setNewId(newId + 1);
-  };
-
+function AddEduBtn({ handleClick }) {
   return (
-    <button type="button" onClick={addEducation}>
+    <button type="button" onClick={handleClick}>
       + Education
+    </button>
+  );
+}
+
+function SaveEduBtn({ handleClick }) {
+  return (
+    <button type="submit" onClick={handleClick}>
+      Save
     </button>
   );
 }
@@ -104,7 +82,28 @@ function Education({ education, handleChange, setEducation }) {
   const [newId, setNewId] = useState(0);
   const [isActive, setIsActive] = useState(0);
   const activeObj = education.find((obj) => obj.id == isActive);
-  // console.log(currentObj);
+
+  const addEducation = () => {
+    setIsActive(newId);
+    setShowInputs(true);
+    setEducation([
+      ...education,
+      {
+        id: newId,
+        degree: '',
+        school: '',
+        startDate: '',
+        endDate: '',
+        description: '',
+      },
+    ]);
+    setNewId(newId + 1);
+  };
+
+  const saveEducation = (e) => {
+    e.preventDefault();
+    setShowInputs(false);
+  };
 
   const editEducation = (e) => {
     setIsActive(e.target.id);
@@ -123,7 +122,7 @@ function Education({ education, handleChange, setEducation }) {
         <EducationForm
           activeObj={activeObj}
           handleChange={handleChange}
-          setShowInputs={setShowInputs}
+          handleClick={saveEducation}
         />
       ) : (
         <div>
@@ -136,14 +135,7 @@ function Education({ education, handleChange, setEducation }) {
               </div>
             );
           })}
-          <AddEduBtn
-            setShowInputs={setShowInputs}
-            setEducation={setEducation}
-            education={education}
-            newId={newId}
-            setIsActive={setIsActive}
-            setNewId={setNewId}
-          />
+          <AddEduBtn handleClick={addEducation} />
         </div>
       )}
     </div>

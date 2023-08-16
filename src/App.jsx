@@ -76,9 +76,9 @@ export default App;
 
 // EDUCATION TO DOS
 
-// add ability to remove education experience
-
 // refactor education components to add all functions to main edu component
+
+// MOVE COMPONENTS BEING REUSED TO A DIFFERENT MODULE AND EXPORT (ADD, SAVE, EDIT, DELETE)
 
 //
 
@@ -95,3 +95,5 @@ export default App;
 // add labels to fields
 
 // set correct input fields (email, phone number, dates)
+
+// maybe move change handlers to specific components
