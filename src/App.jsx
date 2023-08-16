@@ -76,10 +76,6 @@ export default App;
 
 // EDUCATION TO DOS
 
-// refactor education components to add all functions to main edu component
-
-// MOVE COMPONENTS BEING REUSED TO A DIFFERENT MODULE AND EXPORT (ADD, SAVE, EDIT, DELETE)
-
 //
 
 // WORK TO DOS
@@ -97,3 +93,9 @@ export default App;
 // set correct input fields (email, phone number, dates)
 
 // maybe move change handlers to specific components
+
+//
+
+// QUESTIONS
+
+// is it better to leave different button types in different components or do one and pass info through

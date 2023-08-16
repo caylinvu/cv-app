@@ -1,81 +1,6 @@
 import { useState } from 'react';
-
-function EducationForm({ activeObj, handleChange, handleClick }) {
-  return (
-    <form className="education-form">
-      <div className="education-inputs" id={activeObj.id}>
-        <input
-          type="text"
-          placeholder="Degree / Field of Study"
-          name="degree"
-          value={activeObj.degree}
-          onChange={handleChange}
-        />
-        <input
-          type="text"
-          placeholder="School / University"
-          name="school"
-          value={activeObj.school}
-          onChange={handleChange}
-        />
-        <input
-          type="text"
-          placeholder="Start Date"
-          name="startDate"
-          value={activeObj.startDate}
-          onChange={handleChange}
-        />
-        <input
-          type="text"
-          placeholder="End Date"
-          name="endDate"
-          value={activeObj.endDate}
-          onChange={handleChange}
-        />
-        <input
-          type="text"
-          placeholder="Description"
-          name="description"
-          value={activeObj.description}
-          onChange={handleChange}
-        />
-      </div>
-      <SaveEduBtn handleClick={handleClick} />
-    </form>
-  );
-}
-
-function AddEduBtn({ handleClick }) {
-  return (
-    <button type="button" onClick={handleClick}>
-      + Education
-    </button>
-  );
-}
-
-function SaveEduBtn({ handleClick }) {
-  return (
-    <button type="submit" onClick={handleClick}>
-      Save
-    </button>
-  );
-}
-
-function EditEduBtn({ handleClick, id }) {
-  return (
-    <button type="button" onClick={handleClick} id={id}>
-      Edit
-    </button>
-  );
-}
-
-function DeleteEduBtn({ handleClick, id }) {
-  return (
-    <button type="button" onClick={handleClick} id={id}>
-      Delete
-    </button>
-  );
-}
+import EducationForm from './EducationForm';
+import { AddButton, EditButton, DeleteButton } from '../Buttons';
 
 function InputEducation({ education, handleChange, setEducation }) {
   const [showInputs, setShowInputs] = useState(false);
@@ -130,12 +55,12 @@ function InputEducation({ education, handleChange, setEducation }) {
             return (
               <div key={obj.id}>
                 <p>{obj.school}</p>
-                <EditEduBtn handleClick={editEducation} id={obj.id} />
-                <DeleteEduBtn handleClick={deleteEducation} id={obj.id} />
+                <EditButton handleClick={editEducation} id={obj.id} />
+                <DeleteButton handleClick={deleteEducation} id={obj.id} />
               </div>
             );
           })}
-          <AddEduBtn handleClick={addEducation} />
+          <AddButton handleClick={addEducation} title="Education" />
         </div>
       )}
     </div>
