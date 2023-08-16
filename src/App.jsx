@@ -19,13 +19,7 @@ function App() {
 
   const [education, setEducation] = useState([]);
 
-  const [workExp, setWorkExp] = useState({
-    company: '',
-    position: '',
-    startDate: '',
-    endDate: '',
-    description: '',
-  });
+  const [workExp, setWorkExp] = useState([]);
 
   const handleGeneralChange = (e) => {
     setGeneralInfo({ ...generalInfo, [e.target.name]: e.target.value });
@@ -58,10 +52,10 @@ function App() {
         <InputGeneralInfo info={generalInfo} handleChange={handleGeneralChange} />
         <InputEducation
           education={education}
-          handleChange={handleEducationChange}
           setEducation={setEducation}
+          handleChange={handleEducationChange}
         />
-        <InputWorkExp info={workExp} handleChange={handleWorkChange} />
+        <InputWorkExp workExp={workExp} setWorkExp={setWorkExp} handleChange={handleWorkChange} />
       </div>
       <div className="display-container">
         <DisplayGeneralInfo info={generalInfo} />

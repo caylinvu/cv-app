@@ -2,7 +2,7 @@ import { useState } from 'react';
 import EducationForm from './EducationForm';
 import { AddButton, EditButton, DeleteButton } from '../Buttons';
 
-function InputEducation({ education, handleChange, setEducation }) {
+function InputEducation({ education, setEducation, handleChange }) {
   const [showInputs, setShowInputs] = useState(false);
   const [newId, setNewId] = useState(0);
   const [isActive, setIsActive] = useState(0);
