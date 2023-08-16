@@ -14,17 +14,17 @@ function SaveButton({ handleClick }) {
   );
 }
 
-function EditButton({ handleClick, id }) {
+function EditButton({ handleClick, className }) {
   return (
-    <button type="button" onClick={handleClick} id={id}>
+    <button type="button" onClick={handleClick} className={className}>
       Edit
     </button>
   );
 }
 
-function DeleteButton({ handleClick, id }) {
+function DeleteButton({ handleClick, className }) {
   return (
-    <button type="button" onClick={handleClick} id={id}>
+    <button type="button" onClick={handleClick} className={className}>
       Delete
     </button>
   );

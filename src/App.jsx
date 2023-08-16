@@ -26,7 +26,8 @@ function App() {
   };
 
   const handleEducationChange = (e) => {
-    const currentId = e.target.parentElement.id;
+    const currentId = e.target.parentElement.className;
+    console.log(currentId);
 
     let nextArr = education.map((obj) => {
       if (obj.id != currentId) {
@@ -43,7 +44,21 @@ function App() {
   };
 
   const handleWorkChange = (e) => {
-    setWorkExp({ ...workExp, [e.target.name]: e.target.value });
+    const currentId = e.target.parentElement.className;
+    console.log(currentId);
+
+    let nextArr = workExp.map((obj) => {
+      if (obj.id != currentId) {
+        return obj;
+      } else {
+        return {
+          ...obj,
+          [e.target.name]: e.target.value,
+        };
+      }
+    });
+
+    setWorkExp(nextArr);
   };
 
   return (
@@ -60,7 +75,7 @@ function App() {
       <div className="display-container">
         <DisplayGeneralInfo info={generalInfo} />
         <DisplayEducation education={education} />
-        <DisplayWorkExp info={workExp} />
+        <DisplayWorkExp workExp={workExp} />
       </div>
     </>
   );
@@ -88,7 +103,7 @@ export default App;
 
 // maybe move change handlers to specific components
 
-//
+// maybe try to refactor some of the repeated education/work code
 
 // QUESTIONS
 

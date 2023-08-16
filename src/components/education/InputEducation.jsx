@@ -31,12 +31,12 @@ function InputEducation({ education, setEducation, handleChange }) {
   };
 
   const editEducation = (e) => {
-    setIsActive(e.target.id);
+    setIsActive(e.target.className);
     setShowInputs(true);
   };
 
   const deleteEducation = (e) => {
-    let newArr = education.filter((obj) => obj.id != e.target.id);
+    let newArr = education.filter((obj) => obj.id != e.target.className);
     setEducation(newArr);
   };
 
@@ -50,13 +50,13 @@ function InputEducation({ education, setEducation, handleChange }) {
           handleClick={saveEducation}
         />
       ) : (
-        <div>
+        <div className="education-preview">
           {education.map((obj) => {
             return (
-              <div className="education-preview" key={obj.id}>
+              <div className="school" key={obj.id}>
                 <p>{obj.school}</p>
-                <EditButton handleClick={editEducation} id={obj.id} />
-                <DeleteButton handleClick={deleteEducation} id={obj.id} />
+                <EditButton handleClick={editEducation} className={obj.id} />
+                <DeleteButton handleClick={deleteEducation} className={obj.id} />
               </div>
             );
           })}

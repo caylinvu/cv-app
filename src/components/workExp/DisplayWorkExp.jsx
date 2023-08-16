@@ -1,11 +1,25 @@
-function DisplayWorkExp({ info }) {
+function DisplayWorkExp({ workExp }) {
+  let title = '';
+  if (workExp.length > 0) {
+    title = 'Work Experience';
+  } else {
+    title = '';
+  }
+
   return (
     <div className="display-work-exp">
-      <p>{info.company}</p>
-      <p>{info.position}</p>
-      <p>{info.startDate}</p>
-      <p>{info.endDate}</p>
-      <p>{info.description}</p>
+      <h2>{title}</h2>
+      {workExp.map((obj) => {
+        return (
+          <div className="work-entry" key={obj.id}>
+            <p>{obj.company}</p>
+            <p>{obj.position}</p>
+            <p>{obj.startDate}</p>
+            <p>{obj.endDate}</p>
+            <p>{obj.description}</p>
+          </div>
+        );
+      })}
     </div>
   );
 }

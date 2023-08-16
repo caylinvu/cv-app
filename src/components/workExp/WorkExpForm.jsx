@@ -3,7 +3,7 @@ import { SaveButton } from '../Buttons';
 function WorkExpForm({ activeObj, handleChange, handleClick }) {
   return (
     <form className="work-exp-form">
-      <div className="work-exp-inputs">
+      <div className={activeObj.id}>
         <input
           type="text"
           placeholder="Company"

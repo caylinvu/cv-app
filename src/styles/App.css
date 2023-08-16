@@ -5,6 +5,8 @@
 }
 
 .display-education > h2,
-.display-education > div {
+.display-education > div,
+.display-work-exp > h2,
+.display-work-exp > div {
   padding-bottom: 15px;
 }
