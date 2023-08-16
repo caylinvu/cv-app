@@ -25,11 +25,21 @@ function App() {
     setGeneralInfo({ ...generalInfo, [e.target.name]: e.target.value });
   };
 
-  const handleEducationChange = (e) => {
+  const handleExpChange = (e) => {
     const currentId = e.target.parentElement.className;
     console.log(currentId);
 
-    let nextArr = education.map((obj) => {
+    let state = '';
+    let setState = '';
+    if (e.target.parentElement.id == 'education-inputs') {
+      state = education;
+      setState = setEducation;
+    } else if (e.target.parentElement.id == 'work-exp-inputs') {
+      state = workExp;
+      setState = setWorkExp;
+    }
+
+    let nextArr = state.map((obj) => {
       if (obj.id != currentId) {
         return obj;
       } else {
@@ -40,25 +50,7 @@ function App() {
       }
     });
 
-    setEducation(nextArr);
-  };
-
-  const handleWorkChange = (e) => {
-    const currentId = e.target.parentElement.className;
-    console.log(currentId);
-
-    let nextArr = workExp.map((obj) => {
-      if (obj.id != currentId) {
-        return obj;
-      } else {
-        return {
-          ...obj,
-          [e.target.name]: e.target.value,
-        };
-      }
-    });
-
-    setWorkExp(nextArr);
+    setState(nextArr);
   };
 
   return (
@@ -68,9 +60,9 @@ function App() {
         <InputEducation
           education={education}
           setEducation={setEducation}
-          handleChange={handleEducationChange}
+          handleChange={handleExpChange}
         />
-        <InputWorkExp workExp={workExp} setWorkExp={setWorkExp} handleChange={handleWorkChange} />
+        <InputWorkExp workExp={workExp} setWorkExp={setWorkExp} handleChange={handleExpChange} />
       </div>
       <div className="display-container">
         <DisplayGeneralInfo info={generalInfo} />
@@ -83,18 +75,6 @@ function App() {
 
 export default App;
 
-// EDUCATION TO DOS
-
-//
-
-// WORK TO DOS
-
-// add ability to add additional work experience
-
-// add ability to remove work experience
-
-//
-
 // ALL TO DOS
 
 // add labels to fields
@@ -104,6 +84,12 @@ export default App;
 // maybe move change handlers to specific components
 
 // maybe try to refactor some of the repeated education/work code
+
+// general info - add ability to save info to minimize and add edit button to update fields
+
+// style everything
+
+//
 
 // QUESTIONS
 

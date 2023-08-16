@@ -64,7 +64,3 @@ function InputWorkExp({ workExp, setWorkExp, handleChange }) {
 }
 
 export default InputWorkExp;
-
-// ADD HANDLE CLICK FUNCTIONS
-
-// UPDATE DISPLAY WORK EXP

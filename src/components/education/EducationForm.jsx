@@ -3,7 +3,7 @@ import { SaveButton } from '../Buttons';
 function EducationForm({ activeObj, handleChange, handleClick }) {
   return (
     <form className="education-form">
-      <div className={activeObj.id}>
+      <div className={activeObj.id} id="education-inputs">
         <input
           type="text"
           placeholder="Degree / Field of Study"
