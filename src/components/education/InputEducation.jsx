@@ -41,7 +41,7 @@ function InputEducation({ education, handleChange, setEducation }) {
   };
 
   return (
-    <div className="education">
+    <div className="input-education">
       <h2>Education</h2>
       {showInputs ? (
         <EducationForm
@@ -53,7 +53,7 @@ function InputEducation({ education, handleChange, setEducation }) {
         <div>
           {education.map((obj) => {
             return (
-              <div key={obj.id}>
+              <div className="education-preview" key={obj.id}>
                 <p>{obj.school}</p>
                 <EditButton handleClick={editEducation} id={obj.id} />
                 <DeleteButton handleClick={deleteEducation} id={obj.id} />

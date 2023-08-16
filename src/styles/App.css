@@ -3,3 +3,8 @@
 .display-container > div {
   padding-bottom: 30px;
 }
+
+.display-education > h2,
+.display-education > div {
+  padding-bottom: 15px;
+}
