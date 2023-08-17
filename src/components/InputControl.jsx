@@ -12,30 +12,41 @@ function InputControl({ setGeneralInfo, setWorkExp, setEducation, setNewWorkId, 
   const workExample = [
     {
       id: 0,
-      company: 'Cat Software Inc.',
-      position: 'UI Designer',
+      company: 'Catmart Inc.',
+      position: 'Software Engineer II',
       startDate: 'August 2020',
       endDate: 'present',
       description:
-        'Designed user interface for a variety of clients and industries, including personal websites, notetaking apps, and mobile games.',
+        'Developed the monitoring framework which interfaces with various applications. Supported new application features, serviced launch, and managed application using automated deployment tools.',
     },
     {
       id: 1,
-      company: 'Industrial Sound',
-      position: 'UX Reasearch Assistant',
+      company: 'Meow Electronics',
+      position: 'Software Engineer I',
       startDate: 'May 2018',
       endDate: 'July 2020',
       description:
-        'Supported senior researchers on accessibility standards for the open web. Created and tested prototypes. Produced interactive documenentaion.',
+        'Monitored, supported, and deployed multi-tenant solutions. Developed efficient code to automate repetitive tasks. Improved systems and applications with analytics and ad hoc reporting.',
     },
   ];
 
-  // ADD EDUCATION EXAMPLE
+  const eduExample = [
+    {
+      id: 0,
+      degree: 'Computer Science',
+      school: 'University of Portland',
+      startDate: 'August 2013',
+      endDate: 'December 2017',
+      description: '',
+    },
+  ];
 
   const loadExample = () => {
     setGeneralInfo(generalExample);
     setWorkExp(workExample);
     setNewWorkId(2);
+    setEducation(eduExample);
+    setNewEduId(1);
   };
 
   const clearResume = () => {
@@ -49,6 +60,8 @@ function InputControl({ setGeneralInfo, setWorkExp, setEducation, setNewWorkId, 
     });
     setWorkExp([]);
     setNewWorkId(0);
+    setEducation([]);
+    setNewEduId(0);
   };
 
   return (
