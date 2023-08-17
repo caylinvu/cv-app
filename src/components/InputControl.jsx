@@ -1,6 +1,6 @@
 function InputControl({ setGeneralInfo, setWorkExp, setEducation, setNewWorkId, setNewEduId }) {
   const generalExample = {
-    name: 'Janet Smith',
+    name: 'Jan Smith',
     title: 'Software Engineer',
     email: 'janetsmith@fakeemail.com',
     phone: '(123)-456-7890',
@@ -66,7 +66,7 @@ function InputControl({ setGeneralInfo, setWorkExp, setEducation, setNewWorkId, 
 
   return (
     <div className="input-controls">
-      <button type="button" onClick={clearResume}>
+      <button type="button" className="clear" onClick={clearResume}>
         Clear Resume
       </button>
       <button type="button" onClick={loadExample}>

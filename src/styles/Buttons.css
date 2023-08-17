@@ -4,11 +4,22 @@ button {
   border: none;
   cursor: pointer;
   font-weight: bold;
+  font-size: 15px;
+}
+
+button:active {
+  transform: scale(0.95);
 }
 
 .input-controls {
   display: flex;
   gap: 10px;
+}
+
+.clear {
+  color: rgb(226, 28, 28);
+  /* background-color: white;
+  border: 2px solid rgb(218, 218, 218); */
 }
 
 .input-controls button {
@@ -21,7 +32,23 @@ button {
   margin-top: 15px;
 }
 
+.save-btn button {
+  background-color: rgb(0, 140, 255);
+  color: white;
+}
+
+.add-btn button {
+  border: 4px solid rgb(243, 243, 243);
+  background-color: white;
+  border-radius: 25px;
+}
+
 .entry-btns {
   display: flex;
   gap: 10px;
+}
+
+.entry button,
+.entry-btns button {
+  background-color: white;
 }

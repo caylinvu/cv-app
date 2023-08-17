@@ -44,6 +44,11 @@ input:focus {
 .entry {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  padding: 10px 10px;
+  background-color: rgb(243, 243, 243);
+  border-radius: 10px;
+  margin-bottom: 10px;
 }
 
 .display-container {

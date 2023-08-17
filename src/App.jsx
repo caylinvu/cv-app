@@ -66,25 +66,25 @@ function App() {
 
 export default App;
 
-// ALL TO DOS
-
-// edit placeholder text
-
-// maybe change font
-
-// maybe take out summary and title on general information
-
-// ADD A CANCEL BUTTON
+// STYLING INPUT TO DOS
 
 // FIND ICONS FOR BUTTONS
 
-// ADD ABILITY TO EXPAND SECTIONS
+// ADD A CANCEL BUTTON
 
-// style everything
+// maybe pull showInputs states out so that when the clear/load buttons are pressed, it completely resets all fields and whether they are shown or not
+
+// OR just remove ability to save general info and leave that section open permanently
 
 // don't allow you to enter empty entries
 
 // maybe add recommended fields
+
+// edit placeholder text
+
+// maybe take out summary and title on general information
+
+// MAYBE ADD ABILITY TO EXPAND SECTIONS
 
 // MAYBE disable other add button when clicking on add
 
@@ -92,9 +92,17 @@ export default App;
 
 // maybe add current/ongoing toggle for dates
 
-// leave date input fields as text or change to dates???
+//
 
-// edit example info
+// STYLING DISPLAY TO DOS
+
+//
+
+// ALL TO DOS
+
+// maybe change font
+
+// style everything
 
 //
 
