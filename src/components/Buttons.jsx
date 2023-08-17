@@ -1,3 +1,5 @@
+import '../styles/Buttons.css';
+
 function AddButton({ handleClick, title }) {
   return (
     <button type="button" onClick={handleClick}>

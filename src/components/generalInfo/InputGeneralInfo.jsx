@@ -24,7 +24,7 @@ function InputGeneralInfo({ info, setInfo }) {
       {showInputs ? (
         <GeneralForm info={info} handleChange={handleChange} handleClick={save} />
       ) : (
-        <div>
+        <div className="entry">
           <h3>{info.name}</h3>
           <EditButton handleClick={edit} />
         </div>

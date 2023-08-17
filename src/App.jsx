@@ -68,9 +68,19 @@ export default App;
 
 // ALL TO DOS
 
-// style everything
+// edit placeholder text
 
-// add buttons to clear resume or load an example
+// maybe change font
+
+// maybe take out summary and title on general information
+
+// ADD A CANCEL BUTTON
+
+// FIND ICONS FOR BUTTONS
+
+// ADD ABILITY TO EXPAND SECTIONS
+
+// style everything
 
 // don't allow you to enter empty entries
 
@@ -81,8 +91,6 @@ export default App;
 // set character limits????
 
 // maybe add current/ongoing toggle for dates
-
-// maybe add customization options
 
 // leave date input fields as text or change to dates???
 

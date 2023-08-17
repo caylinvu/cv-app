@@ -65,7 +65,7 @@ function InputControl({ setGeneralInfo, setWorkExp, setEducation, setNewWorkId, 
   };
 
   return (
-    <div>
+    <div className="input-controls">
       <button type="button" onClick={clearResume}>
         Clear Resume
       </button>

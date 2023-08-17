@@ -1,0 +1,27 @@
+button {
+  padding: 10px 15px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.input-controls {
+  display: flex;
+  gap: 10px;
+}
+
+.input-controls button {
+  width: 50%;
+}
+
+.save-btn,
+.add-btn {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.entry-btns {
+  display: flex;
+  gap: 10px;
+}

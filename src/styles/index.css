@@ -7,6 +7,9 @@
 body {
   max-width: 1300px;
   margin: 30px auto;
+  background-color: rgb(243, 243, 243);
+  /* font-family: 'DM Serif Display', serif; */
+  font-family: 'Noto Sans', sans-serif;
 }
 
 #root {
