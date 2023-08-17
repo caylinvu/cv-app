@@ -18,9 +18,9 @@ function App() {
     description: '',
   });
 
-  const [education, setEducation] = useState([]);
-
   const [workExp, setWorkExp] = useState([]);
+
+  const [education, setEducation] = useState([]);
 
   return (
     <>
@@ -52,13 +52,17 @@ export default App;
 
 // ALL TO DOS
 
-// add labels to fields
-
-// set correct input fields (email, phone number, dates)
-
 // style everything
 
 // MAYBE disable other add button when clicking on add
+
+// set character limits????
+
+// maybe add current/ongoing toggle for dates
+
+// maybe add customization options
+
+// leave date input fields as text or change to dates???
 
 //
 
