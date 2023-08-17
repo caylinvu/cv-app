@@ -15,7 +15,7 @@ function App() {
     email: '',
     phone: '',
     location: '',
-    description: '',
+    summary: '',
   });
 
   const [workExp, setWorkExp] = useState([]);
@@ -27,22 +27,22 @@ function App() {
       <div className="input-container">
         <InputGeneralInfo info={generalInfo} setInfo={setGeneralInfo} />
         <InputExperience
-          section={education}
-          setSection={setEducation}
-          Form={EducationForm}
-          title="Education"
-        />
-        <InputExperience
           section={workExp}
           setSection={setWorkExp}
           Form={WorkExpForm}
           title="Work Experience"
         />
+        <InputExperience
+          section={education}
+          setSection={setEducation}
+          Form={EducationForm}
+          title="Education"
+        />
       </div>
       <div className="display-container">
         <DisplayGeneralInfo info={generalInfo} />
-        <DisplayEducation education={education} />
         <DisplayWorkExp workExp={workExp} />
+        <DisplayEducation education={education} />
       </div>
     </>
   );
@@ -53,6 +53,10 @@ export default App;
 // ALL TO DOS
 
 // style everything
+
+// don't allow you to enter empty entries
+
+// maybe add recommended fields
 
 // MAYBE disable other add button when clicking on add
 

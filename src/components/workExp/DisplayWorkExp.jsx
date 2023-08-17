@@ -1,14 +1,7 @@
 function DisplayWorkExp({ workExp }) {
-  let title = '';
-  if (workExp.length > 0) {
-    title = 'Work Experience';
-  } else {
-    title = '';
-  }
-
   return (
     <div className="display-work-exp">
-      <h2>{title}</h2>
+      {workExp.length > 0 ? <h2>Work Experience</h2> : ''}
       {workExp.map((obj) => {
         return (
           <div className="work-entry" key={obj.id}>

@@ -1,14 +1,7 @@
 function DisplayEducation({ education }) {
-  let title = '';
-  if (education.length > 0) {
-    title = 'Education';
-  } else {
-    title = '';
-  }
-
   return (
     <div className="display-education">
-      <h2>{title}</h2>
+      {education.length > 0 ? <h2>Education</h2> : ''}
       {education.map((obj) => {
         return (
           <div className="education-entry" key={obj.id}>

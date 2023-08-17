@@ -49,13 +49,13 @@ function GeneralForm({ info, handleChange, handleClick }) {
           value={info.location}
           onChange={handleChange}
         />
-        <label htmlFor="gen-description">Description</label>
+        <label htmlFor="gen-summary">Summary</label>
         <input
           type="text"
-          placeholder="Description"
-          name="description"
-          id="gen-description"
-          value={info.description}
+          placeholder="Summary"
+          name="summary"
+          id="gen-summary"
+          value={info.summary}
           onChange={handleChange}
         />
       </div>
