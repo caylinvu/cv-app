@@ -19,7 +19,7 @@ function InputGeneralInfo({ info, setInfo }) {
   };
 
   return (
-    <div className="general-info">
+    <div className="input-section">
       <h2>General Information</h2>
       {showInputs ? (
         <GeneralForm info={info} handleChange={handleChange} handleClick={save} />

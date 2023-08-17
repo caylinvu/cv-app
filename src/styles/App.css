@@ -1,12 +1,9 @@
-.input-container > form,
-.input-container > div,
-.display-container > div {
-  padding-bottom: 30px;
+.input-container {
+  max-width: 500px;
 }
 
-.display-education > h2,
-.display-education > div,
-.display-work-exp > h2,
-.display-work-exp > div {
-  padding-bottom: 15px;
+.display-container {
+  width: 770px;
+  height: 1000px;
+  box-shadow: 0 0 8px rgb(194, 194, 194);
 }

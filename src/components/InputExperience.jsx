@@ -1,9 +1,8 @@
 import { useState } from 'react';
 import { AddButton, EditButton, DeleteButton } from './Buttons';
 
-function InputExperience({ section, setSection, Form, title }) {
+function InputExperience({ section, setSection, Form, title, newId, setNewId }) {
   const [showInputs, setShowInputs] = useState(false);
-  const [newId, setNewId] = useState(0);
   const [isActive, setIsActive] = useState(0);
   const activeObj = section.find((obj) => obj.id == isActive);
 
