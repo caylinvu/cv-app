@@ -1,6 +1,6 @@
-import { SaveButton } from '../Buttons';
+import { SaveButton, CancelButton } from '../Buttons';
 
-function EducationForm({ activeObj, handleChange, handleClick }) {
+function EducationForm({ activeObj, handleChange, handleSave, handleCancel }) {
   return (
     <form className="form">
       <div className={activeObj.id} id="education-inputs">
@@ -60,8 +60,9 @@ function EducationForm({ activeObj, handleChange, handleClick }) {
           />
         </div>
       </div>
-      <div className="save-btn">
-        <SaveButton handleClick={handleClick} />
+      <div className="form-btns">
+        <SaveButton handleClick={handleSave} />
+        <CancelButton handleClick={handleCancel} />
       </div>
     </form>
   );

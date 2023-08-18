@@ -19,11 +19,17 @@ function App() {
     summary: '',
   });
 
+  const [genPrev, setGenPrev] = useState(generalInfo);
+
   const [workExp, setWorkExp] = useState([]);
+
+  const [workPrev, setWorkPrev] = useState([]);
 
   const [newWorkId, setNewWorkId] = useState(0);
 
   const [education, setEducation] = useState([]);
+
+  const [eduPrev, setEduPrev] = useState([]);
 
   const [newEduId, setNewEduId] = useState(0);
 
@@ -36,8 +42,16 @@ function App() {
           setEducation={setEducation}
           setNewWorkId={setNewWorkId}
           setNewEduId={setNewEduId}
+          setGenPrev={setGenPrev}
+          setWorkPrev={setWorkPrev}
+          setEduPrev={setEduPrev}
         />
-        <InputGeneralInfo info={generalInfo} setInfo={setGeneralInfo} />
+        <InputGeneralInfo
+          info={generalInfo}
+          setInfo={setGeneralInfo}
+          prevState={genPrev}
+          setPrevState={setGenPrev}
+        />
         <InputExperience
           section={workExp}
           setSection={setWorkExp}
@@ -45,6 +59,8 @@ function App() {
           title="Work Experience"
           newId={newWorkId}
           setNewId={setNewWorkId}
+          prevState={workPrev}
+          setPrevState={setWorkPrev}
         />
         <InputExperience
           section={education}
@@ -53,6 +69,8 @@ function App() {
           title="Education"
           newId={newEduId}
           setNewId={setNewEduId}
+          prevState={eduPrev}
+          setPrevState={setEduPrev}
         />
       </div>
       <div className="display-container">

@@ -1,7 +1,16 @@
 import { useState } from 'react';
 import { AddButton, EditButton, DeleteButton } from './Buttons';
 
-function InputExperience({ section, setSection, Form, title, newId, setNewId }) {
+function InputExperience({
+  section,
+  setSection,
+  Form,
+  title,
+  newId,
+  setNewId,
+  prevState,
+  setPrevState,
+}) {
   const [showInputs, setShowInputs] = useState(false);
   const [isActive, setIsActive] = useState(0);
   const activeObj = section.find((obj) => obj.id == isActive);
@@ -46,11 +55,21 @@ function InputExperience({ section, setSection, Form, title, newId, setNewId }) 
     setIsActive(newId);
     setShowInputs(true);
     setSection([...section, newObj]);
-    setNewId(newId + 1);
   };
 
   const saveExp = (e) => {
     e.preventDefault();
+    setShowInputs(false);
+    setPrevState(section);
+    let currentObj = section.filter((obj) => obj.id == newId);
+    console.log(currentObj.length > 0);
+    if (currentObj.length > 0) {
+      setNewId(newId + 1);
+    }
+  };
+
+  const cancelExp = () => {
+    setSection(prevState);
     setShowInputs(false);
   };
 
@@ -75,7 +94,12 @@ function InputExperience({ section, setSection, Form, title, newId, setNewId }) 
         <h2>{title}</h2>
       </div>
       {showInputs ? (
-        <Form activeObj={activeObj} handleChange={handleChange} handleClick={saveExp} />
+        <Form
+          activeObj={activeObj}
+          handleChange={handleChange}
+          handleSave={saveExp}
+          handleCancel={cancelExp}
+        />
       ) : (
         <div className="input-preview">
           {section.map((obj) => {

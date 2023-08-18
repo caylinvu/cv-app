@@ -10,15 +10,22 @@ function AddButton({ handleClick, title }) {
 
 function SaveButton({ handleClick }) {
   return (
-    <button type="submit" onClick={handleClick}>
+    <button type="submit" onClick={handleClick} className="save-btn">
       Save
+    </button>
+  );
+}
+
+function CancelButton({ handleClick }) {
+  return (
+    <button type="button" onClick={handleClick} className="cancel-btn">
+      Cancel
     </button>
   );
 }
 
 function EditButton({ handleClick, objId }) {
   return (
-    // <button type="button" onClick={handleClick} className={className}>
     <button type="button" onClick={() => handleClick(objId)}>
       <img src="/square-edit-outline.svg" className="btn-icon" alt="" />
     </button>
@@ -33,4 +40,4 @@ function DeleteButton({ handleClick, objId }) {
   );
 }
 
-export { AddButton, SaveButton, EditButton, DeleteButton };
+export { AddButton, SaveButton, CancelButton, EditButton, DeleteButton };

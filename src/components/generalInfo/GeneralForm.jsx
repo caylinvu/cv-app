@@ -1,6 +1,6 @@
-import { SaveButton } from '../Buttons';
+import { SaveButton, CancelButton } from '../Buttons';
 
-function GeneralForm({ info, handleChange, handleClick }) {
+function GeneralForm({ info, handleChange, handleSave, handleCancel }) {
   return (
     <form className="form">
       <div id="general-inputs">
@@ -71,8 +71,9 @@ function GeneralForm({ info, handleChange, handleClick }) {
           />
         </div>
       </div>
-      <div className="save-btn">
-        <SaveButton handleClick={handleClick} />
+      <div className="form-btns">
+        <SaveButton handleClick={handleSave} />
+        <CancelButton handleClick={handleCancel} />
       </div>
     </form>
   );

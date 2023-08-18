@@ -1,4 +1,13 @@
-function InputControl({ setGeneralInfo, setWorkExp, setEducation, setNewWorkId, setNewEduId }) {
+function InputControl({
+  setGeneralInfo,
+  setWorkExp,
+  setEducation,
+  setNewWorkId,
+  setNewEduId,
+  setGenPrev,
+  setWorkPrev,
+  setEduPrev,
+}) {
   const generalExample = {
     name: 'Jan Smith',
     title: 'Software Engineer',
@@ -43,9 +52,12 @@ function InputControl({ setGeneralInfo, setWorkExp, setEducation, setNewWorkId, 
 
   const loadExample = () => {
     setGeneralInfo(generalExample);
+    setGenPrev(generalExample);
     setWorkExp(workExample);
+    setWorkPrev(workExample);
     setNewWorkId(2);
     setEducation(eduExample);
+    setEduPrev(eduExample);
     setNewEduId(1);
   };
 
@@ -58,9 +70,19 @@ function InputControl({ setGeneralInfo, setWorkExp, setEducation, setNewWorkId, 
       location: '',
       summary: '',
     });
+    setGenPrev({
+      name: '',
+      title: '',
+      email: '',
+      phone: '',
+      location: '',
+      summary: '',
+    });
     setWorkExp([]);
+    setWorkPrev([]);
     setNewWorkId(0);
     setEducation([]);
+    setEduPrev([]);
     setNewEduId(0);
   };
 

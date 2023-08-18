@@ -14,7 +14,7 @@
 .section-heading {
   display: flex;
   gap: 10px;
-  padding-bottom: 20px;
+  margin-bottom: 20px;
   align-items: center;
 }
 
@@ -22,8 +22,8 @@
   width: 25px;
 }
 
-.input-section h2 {
-  /* padding-bottom: 20px; */
+.gen-title {
+  padding-bottom: 20px;
 }
 
 .input {
@@ -34,7 +34,7 @@
 }
 
 .input label {
-  font-weight: bold;
+  font-weight: 600;
 }
 
 input {

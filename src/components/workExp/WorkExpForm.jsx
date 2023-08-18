@@ -1,6 +1,6 @@
-import { SaveButton } from '../Buttons';
+import { SaveButton, CancelButton } from '../Buttons';
 
-function WorkExpForm({ activeObj, handleChange, handleClick }) {
+function WorkExpForm({ activeObj, handleChange, handleSave, handleCancel }) {
   return (
     <form className="form">
       <div className={activeObj.id} id="work-exp-inputs">
@@ -60,8 +60,9 @@ function WorkExpForm({ activeObj, handleChange, handleClick }) {
           />
         </div>
       </div>
-      <div className="save-btn">
-        <SaveButton handleClick={handleClick} />
+      <div className="form-btns">
+        <SaveButton handleClick={handleSave} />
+        <CancelButton handleClick={handleCancel} />
       </div>
     </form>
   );
