@@ -70,6 +70,8 @@ export default App;
 
 // FIND ICONS FOR BUTTONS
 
+// find differenct font
+
 // ADD A CANCEL BUTTON
 
 // maybe pull showInputs states out so that when the clear/load buttons are pressed, it completely resets all fields and whether they are shown or not
@@ -79,6 +81,8 @@ export default App;
 // don't allow you to enter empty entries
 
 // maybe add recommended fields
+
+// maybe change descriptions to textarea
 
 // edit placeholder text
 

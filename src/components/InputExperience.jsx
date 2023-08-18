@@ -54,13 +54,13 @@ function InputExperience({ section, setSection, Form, title, newId, setNewId }) 
     setShowInputs(false);
   };
 
-  const editExp = (e) => {
-    setIsActive(e.target.className);
+  const editExp = (objId) => {
+    setIsActive(objId);
     setShowInputs(true);
   };
 
-  const deleteExp = (e) => {
-    let newArr = section.filter((obj) => obj.id != e.target.className);
+  const deleteExp = (objId) => {
+    let newArr = section.filter((obj) => obj.id != objId);
     setSection(newArr);
   };
 
@@ -76,8 +76,8 @@ function InputExperience({ section, setSection, Form, title, newId, setNewId }) 
               <div key={obj.id} className="entry">
                 {title == 'Education' ? <h3>{obj.school}</h3> : <h3>{obj.company}</h3>}
                 <div className="entry-btns">
-                  <EditButton handleClick={editExp} className={obj.id} />
-                  <DeleteButton handleClick={deleteExp} className={obj.id} />
+                  <EditButton handleClick={editExp} objId={obj.id} />
+                  <DeleteButton handleClick={deleteExp} objId={obj.id} />
                 </div>
               </div>
             );

@@ -16,18 +16,19 @@ function SaveButton({ handleClick }) {
   );
 }
 
-function EditButton({ handleClick, className }) {
+function EditButton({ handleClick, objId }) {
   return (
-    <button type="button" onClick={handleClick} className={className}>
-      Edit
+    // <button type="button" onClick={handleClick} className={className}>
+    <button type="button" onClick={() => handleClick(objId)}>
+      <img src="/square-edit-outline.svg" className="btn-icon" alt="" />
     </button>
   );
 }
 
-function DeleteButton({ handleClick, className }) {
+function DeleteButton({ handleClick, objId }) {
   return (
-    <button type="button" onClick={handleClick} className={className}>
-      Delete
+    <button type="button" onClick={() => handleClick(objId)}>
+      <img src="/trash-can-outline.svg" className="btn-icon" alt="" />
     </button>
   );
 }

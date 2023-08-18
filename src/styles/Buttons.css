@@ -50,5 +50,15 @@ button:active {
 
 .entry button,
 .entry-btns button {
-  background-color: white;
+  padding: 5px;
+}
+
+.entry button:hover,
+.entry-btns button:hover {
+  filter: brightness(95%);
+}
+
+.btn-icon {
+  width: 20px;
+  vertical-align: middle;
 }
