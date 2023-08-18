@@ -68,10 +68,6 @@ export default App;
 
 // STYLING INPUT TO DOS
 
-// FIND ICONS FOR BUTTONS
-
-// find differenct font
-
 // ADD A CANCEL BUTTON
 
 // maybe pull showInputs states out so that when the clear/load buttons are pressed, it completely resets all fields and whether they are shown or not
@@ -104,9 +100,9 @@ export default App;
 
 // ALL TO DOS
 
-// maybe change font
-
 // style everything
+
+// make responsive
 
 //
 

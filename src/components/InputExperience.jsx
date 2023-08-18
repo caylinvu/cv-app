@@ -66,7 +66,14 @@ function InputExperience({ section, setSection, Form, title, newId, setNewId }) 
 
   return (
     <div className="input-section">
-      <h2>{title}</h2>
+      <div className="section-heading">
+        <img
+          src={title == 'Education' ? '/school.svg' : '/briefcase.svg'}
+          className="section-icon"
+          alt=""
+        />
+        <h2>{title}</h2>
+      </div>
       {showInputs ? (
         <Form activeObj={activeObj} handleChange={handleChange} handleClick={saveExp} />
       ) : (

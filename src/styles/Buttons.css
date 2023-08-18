@@ -7,6 +7,10 @@ button {
   font-size: 15px;
 }
 
+button:hover {
+  filter: brightness(95%);
+}
+
 button:active {
   transform: scale(0.95);
 }
@@ -51,11 +55,6 @@ button:active {
 .entry button,
 .entry-btns button {
   padding: 5px;
-}
-
-.entry button:hover,
-.entry-btns button:hover {
-  filter: brightness(95%);
 }
 
 .btn-icon {

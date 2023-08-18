@@ -11,8 +11,19 @@
   padding: 20px;
 }
 
-.input-section h2 {
+.section-heading {
+  display: flex;
+  gap: 10px;
   padding-bottom: 20px;
+  align-items: center;
+}
+
+.section-icon {
+  width: 25px;
+}
+
+.input-section h2 {
+  /* padding-bottom: 20px; */
 }
 
 .input {
