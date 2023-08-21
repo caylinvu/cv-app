@@ -1,5 +1,5 @@
 # CV Application
-CV building application created with React as part of The Odin Project curriculum.
+CV building application created with React as part of The Odin Project curriculum
 
 ## Features
   * User can populate input fields with their general information, work experience, and education experience
