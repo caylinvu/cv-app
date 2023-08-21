@@ -5,12 +5,26 @@ function DisplayWorkExp({ workExp }) {
       {workExp.map((obj) => {
         return (
           <div className="work-entry" key={obj.id}>
-            <p>{obj.company}</p>
-            <p>{obj.position}</p>
-            <p>{obj.startDate}</p>
-            <p>{obj.endDate}</p>
-            <p>{obj.location}</p>
-            <p>{obj.description}</p>
+            <div className="bold">
+              <p>{obj.company}</p>
+              {obj.startDate && obj.endDate ? (
+                <p>
+                  {obj.startDate}-{obj.endDate}
+                </p>
+              ) : (obj.startDate && !obj.endDate) || (!obj.startDate && obj.endDate) ? (
+                <p>
+                  {obj.startDate}
+                  {obj.endDate}
+                </p>
+              ) : (
+                ''
+              )}
+            </div>
+            <div className="italic">
+              <p>{obj.position}</p>
+              <p>{obj.location}</p>
+            </div>
+            <p className="desc">{obj.description}</p>
           </div>
         );
       })}
