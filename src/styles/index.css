@@ -8,7 +8,6 @@ body {
   max-width: 1300px;
   margin: 30px auto;
   background-color: rgb(243, 243, 243);
-  /* font-family: 'DM Serif Display', serif; */
   font-family: 'Noto Sans', sans-serif;
   color: rgb(53, 53, 53);
 }
@@ -18,8 +17,13 @@ body {
   gap: 30px;
 }
 
+.display-container {
+  flex-shrink: 0;
+}
+
 button,
 input,
 textarea {
   font-family: inherit;
+  color: rgb(53, 53, 53);
 }

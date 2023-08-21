@@ -87,8 +87,6 @@ export default App;
 
 // FUTURE TO DOS
 
-// change resume name font
-
 // add ability to expand/minimize sections
 
 // set character limits????
@@ -97,10 +95,4 @@ export default App;
 
 // create new resume page if overflow
 
-//
-
-// ALL TO DOS
-
-// make responsive
-
-// make example resume default on load
+// add ability to customize resume color/font

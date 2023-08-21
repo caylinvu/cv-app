@@ -27,6 +27,7 @@
 
 .section-icon {
   width: 25px;
+  filter: invert(16%) sepia(0%) saturate(982%) hue-rotate(263deg) brightness(107%) contrast(88%);
 }
 
 .gen-title {

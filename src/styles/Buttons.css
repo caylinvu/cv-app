@@ -22,8 +22,6 @@ button:active {
 
 .clear {
   color: rgb(226, 28, 28);
-  /* background-color: white;
-  border: 2px solid rgb(218, 218, 218); */
 }
 
 .input-controls button {
@@ -61,4 +59,5 @@ button:active {
 .btn-icon {
   width: 20px;
   vertical-align: middle;
+  filter: invert(16%) sepia(0%) saturate(982%) hue-rotate(263deg) brightness(107%) contrast(88%);
 }
