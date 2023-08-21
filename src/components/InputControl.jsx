@@ -47,7 +47,7 @@ function InputControl({
   const eduExample = [
     {
       id: 0,
-      degree: 'Computer Science',
+      degree: "Bachelor's Degree in Computer Science",
       school: 'University of Portland',
       startDate: 'August 2013',
       endDate: 'December 2017',

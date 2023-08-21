@@ -148,7 +148,8 @@ textarea:focus {
   margin-top: 20px;
 }
 
-.work-entry > div {
+.work-entry > div,
+.education-entry > div {
   display: flex;
   justify-content: space-between;
 }

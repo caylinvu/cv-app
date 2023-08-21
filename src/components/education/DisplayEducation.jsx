@@ -5,12 +5,26 @@ function DisplayEducation({ education }) {
       {education.map((obj) => {
         return (
           <div className="education-entry" key={obj.id}>
-            <p>{obj.school}</p>
-            <p>{obj.degree}</p>
-            <p>{obj.startDate}</p>
-            <p>{obj.endDate}</p>
-            <p>{obj.location}</p>
-            <p>{obj.description}</p>
+            <div className="bold">
+              <p>{obj.school}</p>
+              {obj.startDate && obj.endDate ? (
+                <p>
+                  {obj.startDate}-{obj.endDate}
+                </p>
+              ) : (obj.startDate && !obj.endDate) || (!obj.startDate && obj.endDate) ? (
+                <p>
+                  {obj.startDate}
+                  {obj.endDate}
+                </p>
+              ) : (
+                ''
+              )}
+            </div>
+            <div className="italic">
+              <p>{obj.degree}</p>
+              <p>{obj.location}</p>
+            </div>
+            <p className="desc">{obj.description}</p>
           </div>
         );
       })}
