@@ -15,10 +15,10 @@ function InputControl({
     name: 'Jan Smith',
     title: 'Software Engineer',
     email: 'jansmith@fakeemail.com',
-    phone: '(123)-456-7890',
+    phone: '123-456-7890',
     location: 'Portland, Oregon',
     summary:
-      'Young professional with 5 years of programming experience. Looking for new career opportunities where I can further improve my skills in web development and work alongside a passionate team in a company whose values align with mine.',
+      'Young professional with 5 years of programming experience and a college background in Computer Science. Looking for new career opportunities where I can further improve my skills in web development and work alongside a passionate team in a company whose values align with mine. Open to work in any field where my experience is applicable, and also open to learning new skills.',
   };
 
   const workExample = [

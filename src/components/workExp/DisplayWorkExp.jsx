@@ -1,7 +1,7 @@
 function DisplayWorkExp({ workExp }) {
   return (
     <div className="display-work-exp">
-      {workExp.length > 0 ? <h2>Work Experience</h2> : ''}
+      {workExp.length > 0 ? <h2 className="display-header">Work Experience</h2> : ''}
       {workExp.map((obj) => {
         return (
           <div className="work-entry" key={obj.id}>

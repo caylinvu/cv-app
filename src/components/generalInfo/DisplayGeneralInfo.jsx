@@ -20,7 +20,7 @@ function DisplayGeneralInfo({ info }) {
         </div>
       </div>
       <div className="summary">
-        {info.summary ? <h2>Summary</h2> : ''}
+        {info.summary ? <h2 className="display-header">Summary</h2> : ''}
         <p>{info.summary}</p>
       </div>
     </div>

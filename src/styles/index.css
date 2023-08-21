@@ -10,6 +10,7 @@ body {
   background-color: rgb(243, 243, 243);
   /* font-family: 'DM Serif Display', serif; */
   font-family: 'Noto Sans', sans-serif;
+  color: rgb(53, 53, 53);
 }
 
 #root {

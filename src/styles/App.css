@@ -129,3 +129,16 @@ textarea:focus {
   width: 20px;
   filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(330deg) brightness(103%) contrast(101%);
 }
+
+.display-header {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 22px;
+  background-color: rgb(250, 242, 246);
+  color: rgb(204, 127, 166);
+  border-radius: 3px;
+}
+
+.summary p {
+  padding-top: 15px;
+}

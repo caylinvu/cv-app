@@ -1,7 +1,7 @@
 function DisplayEducation({ education }) {
   return (
     <div className="display-education">
-      {education.length > 0 ? <h2>Education</h2> : ''}
+      {education.length > 0 ? <h2 className="display-header">Education</h2> : ''}
       {education.map((obj) => {
         return (
           <div className="education-entry" key={obj.id}>
