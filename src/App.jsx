@@ -93,8 +93,6 @@ export default App;
 
 // STYLING INPUT TO DOS
 
-// maybe add recommended fields????
-
 // maybe take out summary and title on general information
 
 // MAYBE ADD ABILITY TO EXPAND SECTIONS

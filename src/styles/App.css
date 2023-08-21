@@ -71,6 +71,12 @@ textarea:focus {
   width: 50%;
 }
 
+.span-text {
+  padding-left: 7px;
+  color: rgb(168, 168, 168);
+  font-size: 12px;
+}
+
 .entry {
   display: flex;
   justify-content: space-between;

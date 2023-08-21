@@ -1,11 +1,13 @@
 import { SaveButton, CancelButton } from '../Buttons';
 
-function GeneralForm({ info, handleChange, handleSave, handleCancel }) {
+function GeneralForm({ info, handleChange, handleSave, handleCancel, prevState }) {
   return (
     <form className="form" id="general-form">
       <div id="general-inputs">
         <div className="input">
-          <label htmlFor="gen-name">Full name</label>
+          <label htmlFor="gen-name">
+            Full name<span className="span-text">(required)</span>
+          </label>
           <input
             type="text"
             placeholder="Enter first and last name"
@@ -17,10 +19,12 @@ function GeneralForm({ info, handleChange, handleSave, handleCancel }) {
           />
         </div>
         <div className="input">
-          <label htmlFor="gen-title">Title</label>
+          <label htmlFor="gen-title">
+            Title<span className="span-text">(optional)</span>
+          </label>
           <input
             type="text"
-            placeholder="Enter title (optional)"
+            placeholder="Enter title"
             name="title"
             id="gen-title"
             value={info.title}
@@ -28,7 +32,9 @@ function GeneralForm({ info, handleChange, handleSave, handleCancel }) {
           />
         </div>
         <div className="input">
-          <label htmlFor="gen-email">Email address</label>
+          <label htmlFor="gen-email">
+            Email address<span className="span-text">(recommended)</span>
+          </label>
           <input
             type="text"
             placeholder="Enter email address"
@@ -39,7 +45,9 @@ function GeneralForm({ info, handleChange, handleSave, handleCancel }) {
           />
         </div>
         <div className="input">
-          <label htmlFor="gen-phone">Phone number</label>
+          <label htmlFor="gen-phone">
+            Phone number<span className="span-text">(recommended)</span>
+          </label>
           <input
             type="text"
             placeholder="Enter phone number"
@@ -50,7 +58,9 @@ function GeneralForm({ info, handleChange, handleSave, handleCancel }) {
           />
         </div>
         <div className="input">
-          <label htmlFor="gen-location">Location</label>
+          <label htmlFor="gen-location">
+            Location<span className="span-text">(recommended)</span>
+          </label>
           <input
             type="text"
             placeholder="City, State / Country"
@@ -61,7 +71,9 @@ function GeneralForm({ info, handleChange, handleSave, handleCancel }) {
           />
         </div>
         <div className="input">
-          <label htmlFor="gen-summary">Summary</label>
+          <label htmlFor="gen-summary">
+            Summary<span className="span-text">(optional)</span>
+          </label>
           <textarea
             placeholder="Enter short summary to appear at top of resume"
             name="summary"
@@ -74,7 +86,7 @@ function GeneralForm({ info, handleChange, handleSave, handleCancel }) {
       </div>
       <div className="form-btns">
         <SaveButton handleClick={handleSave} />
-        <CancelButton handleClick={handleCancel} />
+        {!prevState.name ? '' : <CancelButton handleClick={handleCancel} />}
       </div>
     </form>
   );

@@ -5,7 +5,9 @@ function WorkExpForm({ activeObj, handleChange, handleSave, handleCancel }) {
     <form className="form" id="work-form">
       <div className={activeObj.id} id="work-exp-inputs">
         <div className="input">
-          <label htmlFor="work-company">Company</label>
+          <label htmlFor="work-company">
+            Company<span className="span-text">(required)</span>
+          </label>
           <input
             type="text"
             placeholder="Enter company name"
@@ -17,7 +19,9 @@ function WorkExpForm({ activeObj, handleChange, handleSave, handleCancel }) {
           />
         </div>
         <div className="input">
-          <label htmlFor="work-position">Position</label>
+          <label htmlFor="work-position">
+            Position<span className="span-text">(recommended)</span>
+          </label>
           <input
             type="text"
             placeholder="Enter position title"
@@ -29,7 +33,9 @@ function WorkExpForm({ activeObj, handleChange, handleSave, handleCancel }) {
         </div>
         <div className="date-div">
           <div className="input">
-            <label htmlFor="work-start">Start Date</label>
+            <label htmlFor="work-start">
+              Start Date<span className="span-text">(recommended)</span>
+            </label>
             <input
               type="text"
               placeholder="Enter start date"
@@ -40,7 +46,9 @@ function WorkExpForm({ activeObj, handleChange, handleSave, handleCancel }) {
             />
           </div>
           <div className="input">
-            <label htmlFor="work-end">End Date</label>
+            <label htmlFor="work-end">
+              End Date<span className="span-text">(recommended)</span>
+            </label>
             <input
               type="text"
               placeholder="Enter end date"
@@ -52,7 +60,9 @@ function WorkExpForm({ activeObj, handleChange, handleSave, handleCancel }) {
           </div>
         </div>
         <div className="input">
-          <label htmlFor="work-location">Location</label>
+          <label htmlFor="work-location">
+            Location<span className="span-text">(recommended)</span>
+          </label>
           <input
             type="text"
             placeholder="Enter location"
@@ -63,7 +73,9 @@ function WorkExpForm({ activeObj, handleChange, handleSave, handleCancel }) {
           />
         </div>
         <div className="input">
-          <label htmlFor="work-description">Description</label>
+          <label htmlFor="work-description">
+            Description<span className="span-text">(recommended)</span>
+          </label>
           <textarea
             placeholder="Enter work description and responsibilities"
             name="description"

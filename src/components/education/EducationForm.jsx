@@ -5,7 +5,9 @@ function EducationForm({ activeObj, handleChange, handleSave, handleCancel }) {
     <form className="form" id="edu-form">
       <div className={activeObj.id} id="education-inputs">
         <div className="input">
-          <label htmlFor="edu-school">School</label>
+          <label htmlFor="edu-school">
+            School<span className="span-text">(required)</span>
+          </label>
           <input
             type="text"
             placeholder="Enter school / university"
@@ -17,7 +19,9 @@ function EducationForm({ activeObj, handleChange, handleSave, handleCancel }) {
           />
         </div>
         <div className="input">
-          <label htmlFor="edu-degree">Degree</label>
+          <label htmlFor="edu-degree">
+            Degree<span className="span-text">(recommended)</span>
+          </label>
           <input
             type="text"
             placeholder="Enter degree / field of study"
@@ -29,7 +33,9 @@ function EducationForm({ activeObj, handleChange, handleSave, handleCancel }) {
         </div>
         <div className="date-div">
           <div className="input">
-            <label htmlFor="edu-start">Start Date</label>
+            <label htmlFor="edu-start">
+              Start Date<span className="span-text">(recommended)</span>
+            </label>
             <input
               type="text"
               placeholder="Enter start date"
@@ -40,7 +46,9 @@ function EducationForm({ activeObj, handleChange, handleSave, handleCancel }) {
             />
           </div>
           <div className="input">
-            <label htmlFor="edu-end">End Date</label>
+            <label htmlFor="edu-end">
+              End Date<span className="span-text">(recommended)</span>
+            </label>
             <input
               type="text"
               placeholder="Enter end date"
@@ -52,7 +60,9 @@ function EducationForm({ activeObj, handleChange, handleSave, handleCancel }) {
           </div>
         </div>
         <div className="input">
-          <label htmlFor="edu-location">Location</label>
+          <label htmlFor="edu-location">
+            Location<span className="span-text">(recommended)</span>
+          </label>
           <input
             type="text"
             placeholder="Enter location"
@@ -63,7 +73,9 @@ function EducationForm({ activeObj, handleChange, handleSave, handleCancel }) {
           />
         </div>
         <div className="input">
-          <label htmlFor="edu-description">Description</label>
+          <label htmlFor="edu-description">
+            Description<span className="span-text">(optional)</span>
+          </label>
           <textarea
             placeholder="Enter additional school description and extracurricular activities (optional)"
             name="description"

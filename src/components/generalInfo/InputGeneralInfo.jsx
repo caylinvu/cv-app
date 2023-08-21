@@ -36,6 +36,7 @@ function InputGeneralInfo({ info, setInfo, prevState, setPrevState, showInputs, 
           handleChange={handleChange}
           handleSave={save}
           handleCancel={cancel}
+          prevState={prevState}
         />
       ) : (
         <div className="entry">

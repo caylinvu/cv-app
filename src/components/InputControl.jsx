@@ -65,7 +65,7 @@ function InputControl({
     setEducation(eduExample);
     setEduPrev(eduExample);
     setNewEduId(1);
-    setShowGen(true);
+    setShowGen(false);
     setShowWork(false);
     setShowEdu(false);
   };
