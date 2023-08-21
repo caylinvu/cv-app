@@ -1,3 +1,5 @@
+/* ----------INPUT SIDE---------- */
+
 .input-container {
   width: 500px;
   display: flex;
@@ -59,6 +61,16 @@ textarea:focus {
   box-shadow: 0px 0px 4px rgb(0, 140, 255);
 }
 
+.date-div {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.date-div > div {
+  width: 50%;
+}
+
 .entry {
   display: flex;
   justify-content: space-between;
@@ -68,6 +80,8 @@ textarea:focus {
   border-radius: 10px;
   margin-bottom: 10px;
 }
+
+/* ----------RESUME DISPLAY SIDE---------- */
 
 .display-container {
   width: 770px;

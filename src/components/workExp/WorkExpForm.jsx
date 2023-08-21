@@ -27,27 +27,29 @@ function WorkExpForm({ activeObj, handleChange, handleSave, handleCancel }) {
             onChange={handleChange}
           />
         </div>
-        <div className="input">
-          <label htmlFor="work-start">Start Date</label>
-          <input
-            type="text"
-            placeholder="Enter start date"
-            name="startDate"
-            id="work-start"
-            value={activeObj.startDate}
-            onChange={handleChange}
-          />
-        </div>
-        <div className="input">
-          <label htmlFor="work-end">End Date</label>
-          <input
-            type="text"
-            placeholder="Enter end date"
-            name="endDate"
-            id="work-end"
-            value={activeObj.endDate}
-            onChange={handleChange}
-          />
+        <div className="date-div">
+          <div className="input">
+            <label htmlFor="work-start">Start Date</label>
+            <input
+              type="text"
+              placeholder="Enter start date"
+              name="startDate"
+              id="work-start"
+              value={activeObj.startDate}
+              onChange={handleChange}
+            />
+          </div>
+          <div className="input">
+            <label htmlFor="work-end">End Date</label>
+            <input
+              type="text"
+              placeholder="Enter end date"
+              name="endDate"
+              id="work-end"
+              value={activeObj.endDate}
+              onChange={handleChange}
+            />
+          </div>
         </div>
         <div className="input">
           <label htmlFor="work-location">Location</label>

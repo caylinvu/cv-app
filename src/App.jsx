@@ -93,11 +93,7 @@ export default App;
 
 // STYLING INPUT TO DOS
 
-// edit placeholder text
-
 // maybe add recommended fields????
-
-// maybe make start + end dates side by side
 
 // maybe take out summary and title on general information
 

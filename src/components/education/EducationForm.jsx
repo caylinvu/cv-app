@@ -27,27 +27,29 @@ function EducationForm({ activeObj, handleChange, handleSave, handleCancel }) {
             onChange={handleChange}
           />
         </div>
-        <div className="input">
-          <label htmlFor="edu-start">Start Date</label>
-          <input
-            type="text"
-            placeholder="Enter start date"
-            name="startDate"
-            id="edu-start"
-            value={activeObj.startDate}
-            onChange={handleChange}
-          />
-        </div>
-        <div className="input">
-          <label htmlFor="edu-end">End Date</label>
-          <input
-            type="text"
-            placeholder="Enter end date"
-            name="endDate"
-            id="edu-end"
-            value={activeObj.endDate}
-            onChange={handleChange}
-          />
+        <div className="date-div">
+          <div className="input">
+            <label htmlFor="edu-start">Start Date</label>
+            <input
+              type="text"
+              placeholder="Enter start date"
+              name="startDate"
+              id="edu-start"
+              value={activeObj.startDate}
+              onChange={handleChange}
+            />
+          </div>
+          <div className="input">
+            <label htmlFor="edu-end">End Date</label>
+            <input
+              type="text"
+              placeholder="Enter end date"
+              name="endDate"
+              id="edu-end"
+              value={activeObj.endDate}
+              onChange={handleChange}
+            />
+          </div>
         </div>
         <div className="input">
           <label htmlFor="edu-location">Location</label>
