@@ -91,7 +91,7 @@ function App() {
 
 export default App;
 
-// STYLING INPUT TO DOS
+// FUTURE TO DOS
 
 // maybe take out summary and title on general information
 

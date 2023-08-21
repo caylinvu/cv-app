@@ -14,7 +14,7 @@ function InputControl({
   const generalExample = {
     name: 'Jan Smith',
     title: 'Software Engineer',
-    email: 'janetsmith@fakeemail.com',
+    email: 'jansmith@fakeemail.com',
     phone: '(123)-456-7890',
     location: 'Portland, Oregon',
     summary:
