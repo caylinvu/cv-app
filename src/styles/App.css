@@ -20,6 +20,11 @@
   align-items: center;
 }
 
+.gen-title,
+.section-heading h2 {
+  font-size: 23px;
+}
+
 .section-icon {
   width: 25px;
 }
@@ -44,7 +49,7 @@ textarea {
   border: none;
   background-color: rgb(243, 243, 243);
   border-radius: 10px;
-  padding: 0px 10px;
+  padding: 3px 10px;
 }
 
 input {
@@ -87,6 +92,10 @@ textarea:focus {
   margin-bottom: 10px;
 }
 
+.entry h3 {
+  font-size: 18px;
+}
+
 /* ----------RESUME DISPLAY SIDE---------- */
 
 .display-container {
@@ -103,7 +112,7 @@ textarea:focus {
 }
 
 .basic-info {
-  background-color: rgb(206, 135, 170);
+  background-color: rgb(201, 130, 165);
   color: #ffffff;
   padding: 35px 50px;
 }
@@ -111,6 +120,8 @@ textarea:focus {
 .basic-info h1,
 .basic-info h2 {
   text-align: center;
+  font-family: 'DM Serif Display', serif;
+  font-weight: 400;
 }
 
 .basic-info h1 {
@@ -136,12 +147,15 @@ textarea:focus {
 
 .display-header {
   text-align: center;
+  padding: 3px 0px;
   margin-top: 30px;
   margin-bottom: 20px;
   font-size: 22px;
   background-color: rgb(250, 242, 246);
-  color: rgb(204, 127, 166);
+  color: rgb(187, 113, 150);
   border-radius: 3px;
+  font-family: 'DM Serif Display', serif;
+  font-weight: 400;
 }
 
 .work-entry,
