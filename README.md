@@ -8,4 +8,4 @@ CV building application created with React as part of The Odin Project curriculu
   * Ability to clear current resume or load an example resume
 
 ## Purpose
-  * This was my first project using React JS, in which my main goal was to practice using components to build a JS application. 
+  * This was my first project using React JS, in which my main goal was to practice using components to build a JS application
