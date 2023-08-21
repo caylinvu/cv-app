@@ -8,7 +8,7 @@ function WorkExpForm({ activeObj, handleChange, handleSave, handleCancel }) {
           <label htmlFor="work-company">Company</label>
           <input
             type="text"
-            placeholder="Company"
+            placeholder="Enter company name"
             name="company"
             id="work-company"
             value={activeObj.company}
@@ -20,7 +20,7 @@ function WorkExpForm({ activeObj, handleChange, handleSave, handleCancel }) {
           <label htmlFor="work-position">Position</label>
           <input
             type="text"
-            placeholder="Position"
+            placeholder="Enter position title"
             name="position"
             id="work-position"
             value={activeObj.position}
@@ -31,7 +31,7 @@ function WorkExpForm({ activeObj, handleChange, handleSave, handleCancel }) {
           <label htmlFor="work-start">Start Date</label>
           <input
             type="text"
-            placeholder="Start Date"
+            placeholder="Enter start date"
             name="startDate"
             id="work-start"
             value={activeObj.startDate}
@@ -42,7 +42,7 @@ function WorkExpForm({ activeObj, handleChange, handleSave, handleCancel }) {
           <label htmlFor="work-end">End Date</label>
           <input
             type="text"
-            placeholder="End Date"
+            placeholder="Enter end date"
             name="endDate"
             id="work-end"
             value={activeObj.endDate}
@@ -50,14 +50,25 @@ function WorkExpForm({ activeObj, handleChange, handleSave, handleCancel }) {
           />
         </div>
         <div className="input">
-          <label htmlFor="work-description">Description</label>
+          <label htmlFor="work-location">Location</label>
           <input
             type="text"
-            placeholder="Description"
+            placeholder="Enter location"
+            name="location"
+            id="work-location"
+            value={activeObj.location}
+            onChange={handleChange}
+          />
+        </div>
+        <div className="input">
+          <label htmlFor="work-description">Description</label>
+          <textarea
+            placeholder="Enter work description and responsibilities"
             name="description"
             id="work-description"
             value={activeObj.description}
             onChange={handleChange}
+            rows="4"
           />
         </div>
       </div>

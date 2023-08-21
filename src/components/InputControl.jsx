@@ -28,6 +28,7 @@ function InputControl({
       position: 'Software Engineer II',
       startDate: 'August 2020',
       endDate: 'present',
+      location: 'Remote',
       description:
         'Developed the monitoring framework which interfaces with various applications. Supported new application features, serviced launch, and managed application using automated deployment tools.',
     },
@@ -37,6 +38,7 @@ function InputControl({
       position: 'Software Engineer I',
       startDate: 'May 2018',
       endDate: 'July 2020',
+      location: 'Portland, OR',
       description:
         'Monitored, supported, and deployed multi-tenant solutions. Developed efficient code to automate repetitive tasks. Improved systems and applications with analytics and ad hoc reporting.',
     },
@@ -49,6 +51,7 @@ function InputControl({
       school: 'University of Portland',
       startDate: 'August 2013',
       endDate: 'December 2017',
+      location: 'Portland, OR',
       description: '',
     },
   ];

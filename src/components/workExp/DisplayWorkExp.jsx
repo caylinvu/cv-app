@@ -9,6 +9,7 @@ function DisplayWorkExp({ workExp }) {
             <p>{obj.position}</p>
             <p>{obj.startDate}</p>
             <p>{obj.endDate}</p>
+            <p>{obj.location}</p>
             <p>{obj.description}</p>
           </div>
         );

@@ -93,13 +93,11 @@ export default App;
 
 // STYLING INPUT TO DOS
 
-// don't allow empty entries
-
-// maybe add recommended fields
-
-// maybe change descriptions to textarea
-
 // edit placeholder text
+
+// maybe add recommended fields????
+
+// maybe make start + end dates side by side
 
 // maybe take out summary and title on general information
 
@@ -122,9 +120,3 @@ export default App;
 // style everything
 
 // make responsive
-
-//
-
-// QUESTIONS
-
-// is it better to leave different button types in different components or do one and pass info through

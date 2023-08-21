@@ -24,6 +24,7 @@ function InputExperience({
       school: '',
       startDate: '',
       endDate: '',
+      location: '',
       description: '',
     };
   } else if (title == 'Work Experience') {
@@ -33,6 +34,7 @@ function InputExperience({
       position: '',
       startDate: '',
       endDate: '',
+      location: '',
       description: '',
     };
   }

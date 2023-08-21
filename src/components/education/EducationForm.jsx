@@ -8,7 +8,7 @@ function EducationForm({ activeObj, handleChange, handleSave, handleCancel }) {
           <label htmlFor="edu-school">School</label>
           <input
             type="text"
-            placeholder="School / University"
+            placeholder="Enter school / university"
             name="school"
             id="edu-school"
             value={activeObj.school}
@@ -20,7 +20,7 @@ function EducationForm({ activeObj, handleChange, handleSave, handleCancel }) {
           <label htmlFor="edu-degree">Degree</label>
           <input
             type="text"
-            placeholder="Degree / Field of Study"
+            placeholder="Enter degree / field of study"
             name="degree"
             id="edu-degree"
             value={activeObj.degree}
@@ -31,7 +31,7 @@ function EducationForm({ activeObj, handleChange, handleSave, handleCancel }) {
           <label htmlFor="edu-start">Start Date</label>
           <input
             type="text"
-            placeholder="Start Date"
+            placeholder="Enter start date"
             name="startDate"
             id="edu-start"
             value={activeObj.startDate}
@@ -42,7 +42,7 @@ function EducationForm({ activeObj, handleChange, handleSave, handleCancel }) {
           <label htmlFor="edu-end">End Date</label>
           <input
             type="text"
-            placeholder="End Date"
+            placeholder="Enter end date"
             name="endDate"
             id="edu-end"
             value={activeObj.endDate}
@@ -50,14 +50,25 @@ function EducationForm({ activeObj, handleChange, handleSave, handleCancel }) {
           />
         </div>
         <div className="input">
-          <label htmlFor="edu-description">Description</label>
+          <label htmlFor="edu-location">Location</label>
           <input
             type="text"
-            placeholder="Description"
+            placeholder="Enter location"
+            name="location"
+            id="edu-location"
+            value={activeObj.location}
+            onChange={handleChange}
+          />
+        </div>
+        <div className="input">
+          <label htmlFor="edu-description">Description</label>
+          <textarea
+            placeholder="Enter additional school description and extracurricular activities (optional)"
             name="description"
             id="edu-description"
             value={activeObj.description}
             onChange={handleChange}
+            rows="4"
           />
         </div>
       </div>
