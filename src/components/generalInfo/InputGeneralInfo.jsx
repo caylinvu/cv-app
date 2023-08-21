@@ -1,21 +1,24 @@
-import { useState } from 'react';
 import GeneralForm from './GeneralForm';
 import { EditButton } from '../Buttons';
 
-function InputGeneralInfo({ info, setInfo, prevState, setPrevState }) {
-  const [showInputs, setShowInputs] = useState(true);
-
+function InputGeneralInfo({ info, setInfo, prevState, setPrevState, showInputs, setShowInputs }) {
   const handleChange = (e) => {
     setInfo({ ...info, [e.target.name]: e.target.value });
   };
 
   const save = (e) => {
-    e.preventDefault();
-    setShowInputs(false);
-    setPrevState(info);
+    const form = document.getElementById('general-form');
+    let isFormValid = form.checkValidity();
+    if (!isFormValid) {
+      form.reportValidity();
+    } else {
+      e.preventDefault();
+      setShowInputs(false);
+      setPrevState(info);
+    }
   };
 
-  const cancel = (e) => {
+  const cancel = () => {
     setInfo(prevState);
     setShowInputs(false);
   };

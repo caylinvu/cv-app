@@ -7,6 +7,9 @@ function InputControl({
   setGenPrev,
   setWorkPrev,
   setEduPrev,
+  setShowGen,
+  setShowWork,
+  setShowEdu,
 }) {
   const generalExample = {
     name: 'Jan Smith',
@@ -59,6 +62,9 @@ function InputControl({
     setEducation(eduExample);
     setEduPrev(eduExample);
     setNewEduId(1);
+    setShowGen(true);
+    setShowWork(false);
+    setShowEdu(false);
   };
 
   const clearResume = () => {
@@ -84,6 +90,9 @@ function InputControl({
     setEducation([]);
     setEduPrev([]);
     setNewEduId(0);
+    setShowGen(true);
+    setShowWork(false);
+    setShowEdu(false);
   };
 
   return (

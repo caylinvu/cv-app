@@ -2,7 +2,7 @@ import { SaveButton, CancelButton } from '../Buttons';
 
 function WorkExpForm({ activeObj, handleChange, handleSave, handleCancel }) {
   return (
-    <form className="form">
+    <form className="form" id="work-form">
       <div className={activeObj.id} id="work-exp-inputs">
         <div className="input">
           <label htmlFor="work-company">Company</label>
@@ -13,6 +13,7 @@ function WorkExpForm({ activeObj, handleChange, handleSave, handleCancel }) {
             id="work-company"
             value={activeObj.company}
             onChange={handleChange}
+            required
           />
         </div>
         <div className="input">

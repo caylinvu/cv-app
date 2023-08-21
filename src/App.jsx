@@ -18,20 +18,18 @@ function App() {
     location: '',
     summary: '',
   });
-
   const [genPrev, setGenPrev] = useState(generalInfo);
+  const [showGen, setShowGen] = useState(true);
 
   const [workExp, setWorkExp] = useState([]);
-
   const [workPrev, setWorkPrev] = useState([]);
-
   const [newWorkId, setNewWorkId] = useState(0);
+  const [showWork, setShowWork] = useState(false);
 
   const [education, setEducation] = useState([]);
-
   const [eduPrev, setEduPrev] = useState([]);
-
   const [newEduId, setNewEduId] = useState(0);
+  const [showEdu, setShowEdu] = useState(false);
 
   return (
     <>
@@ -45,12 +43,17 @@ function App() {
           setGenPrev={setGenPrev}
           setWorkPrev={setWorkPrev}
           setEduPrev={setEduPrev}
+          setShowGen={setShowGen}
+          setShowWork={setShowWork}
+          setShowEdu={setShowEdu}
         />
         <InputGeneralInfo
           info={generalInfo}
           setInfo={setGeneralInfo}
           prevState={genPrev}
           setPrevState={setGenPrev}
+          showInputs={showGen}
+          setShowInputs={setShowGen}
         />
         <InputExperience
           section={workExp}
@@ -61,6 +64,8 @@ function App() {
           setNewId={setNewWorkId}
           prevState={workPrev}
           setPrevState={setWorkPrev}
+          showInputs={showWork}
+          setShowInputs={setShowWork}
         />
         <InputExperience
           section={education}
@@ -71,6 +76,8 @@ function App() {
           setNewId={setNewEduId}
           prevState={eduPrev}
           setPrevState={setEduPrev}
+          showInputs={showEdu}
+          setShowInputs={setShowEdu}
         />
       </div>
       <div className="display-container">
@@ -86,13 +93,7 @@ export default App;
 
 // STYLING INPUT TO DOS
 
-// ADD A CANCEL BUTTON
-
-// maybe pull showInputs states out so that when the clear/load buttons are pressed, it completely resets all fields and whether they are shown or not
-
-// OR just remove ability to save general info and leave that section open permanently
-
-// don't allow you to enter empty entries
+// don't allow empty entries
 
 // maybe add recommended fields
 

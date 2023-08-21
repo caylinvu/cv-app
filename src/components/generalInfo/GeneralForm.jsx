@@ -2,7 +2,7 @@ import { SaveButton, CancelButton } from '../Buttons';
 
 function GeneralForm({ info, handleChange, handleSave, handleCancel }) {
   return (
-    <form className="form">
+    <form className="form" id="general-form">
       <div id="general-inputs">
         <div className="input">
           <label htmlFor="gen-name">Full Name</label>
@@ -13,6 +13,7 @@ function GeneralForm({ info, handleChange, handleSave, handleCancel }) {
             id="gen-name"
             value={info.name}
             onChange={handleChange}
+            required
           />
         </div>
         <div className="input">

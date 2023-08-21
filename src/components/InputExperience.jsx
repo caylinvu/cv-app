@@ -10,8 +10,9 @@ function InputExperience({
   setNewId,
   prevState,
   setPrevState,
+  showInputs,
+  setShowInputs,
 }) {
-  const [showInputs, setShowInputs] = useState(false);
   const [isActive, setIsActive] = useState(0);
   const activeObj = section.find((obj) => obj.id == isActive);
 
@@ -58,13 +59,26 @@ function InputExperience({
   };
 
   const saveExp = (e) => {
-    e.preventDefault();
-    setShowInputs(false);
-    setPrevState(section);
-    let currentObj = section.filter((obj) => obj.id == newId);
-    console.log(currentObj.length > 0);
-    if (currentObj.length > 0) {
-      setNewId(newId + 1);
+    let form = '';
+    let isFormValid = '';
+    if (title == 'Education') {
+      form = document.getElementById('edu-form');
+      isFormValid = form.checkValidity();
+    } else if (title == 'Work Experience') {
+      form = document.getElementById('work-form');
+      isFormValid = form.checkValidity();
+    }
+
+    if (!isFormValid) {
+      form.reportValidity();
+    } else {
+      e.preventDefault();
+      setShowInputs(false);
+      setPrevState(section);
+      let currentObj = section.filter((obj) => obj.id == newId);
+      if (currentObj.length > 0) {
+        setNewId(newId + 1);
+      }
     }
   };
 
@@ -81,6 +95,7 @@ function InputExperience({
   const deleteExp = (objId) => {
     let newArr = section.filter((obj) => obj.id != objId);
     setSection(newArr);
+    setPrevState(newArr);
   };
 
   return (

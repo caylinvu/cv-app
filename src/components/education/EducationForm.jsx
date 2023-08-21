@@ -2,7 +2,7 @@ import { SaveButton, CancelButton } from '../Buttons';
 
 function EducationForm({ activeObj, handleChange, handleSave, handleCancel }) {
   return (
-    <form className="form">
+    <form className="form" id="edu-form">
       <div className={activeObj.id} id="education-inputs">
         <div className="input">
           <label htmlFor="edu-school">School</label>
@@ -13,6 +13,7 @@ function EducationForm({ activeObj, handleChange, handleSave, handleCancel }) {
             id="edu-school"
             value={activeObj.school}
             onChange={handleChange}
+            required
           />
         </div>
         <div className="input">
