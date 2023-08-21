@@ -93,7 +93,7 @@ export default App;
 
 // FUTURE TO DOS
 
-// maybe take out summary and title on general information
+// maybe change name font
 
 // MAYBE ADD ABILITY TO EXPAND SECTIONS
 
@@ -105,12 +105,8 @@ export default App;
 
 //
 
-// STYLING DISPLAY TO DOS
-
-//
-
 // ALL TO DOS
 
-// style everything
-
 // make responsive
+
+// make example resume default on load
