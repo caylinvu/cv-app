@@ -1,11 +1,16 @@
 # CV Application
-CV building application created with React as part of The Odin Project curriculum
+CV building app where user can generate a resume by filling out a form
+
+Live: https://cv-app-nu.vercel.app/
 
 ## Features
-  * User can populate input fields with their general information, work experience, and education experience
-  * Ability to add, edit, and delete work/education entries
-  * Generates live preview of the filled-out resume as user types
-  * Ability to clear current resume or load an example resume
+  - User can populate input fields with their general information, work experience, and education experience
+  - Ability to add, edit, and delete work/education entries
+  - Generates live preview of the filled-out resume as user types
+  - Ability to clear current resume or load an example resume
+
+## Tech Used
+  - React.js
 
 ## Purpose
-  * This was my first project using React JS, in which my main goal was to practice using components to build a JS application
+  - Practice using React components to build an application 
